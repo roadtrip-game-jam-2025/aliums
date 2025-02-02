@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://tiqcyikqpnoi"]
+
+[ext_resource type="PackedScene" uid="uid://bi7li4et87208" path="res://Player.tscn" id="1_pyplb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vbke2"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q2m3y"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mm4rw"]
+albedo_color = Color(0.31, 0.31, 0.31, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4yal2"]
+size = Vector3(12, 6, 8.45)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f0ae5"]
+size = Vector3(12, 6, 8.45)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6ysn"]
+albedo_color = Color(0.192157, 0.631373, 1, 1)
+metallic = 0.65
+metallic_specular = 0.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fcbkv"]
+load_path = "res://.godot/imported/window.png-be7b06f66c81a4a75d8c64b23481294c.ctex"
+
+[node name="Main" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_vbke2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_q2m3y")
+surface_material_override/0 = SubResource("StandardMaterial3D_mm4rw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.973722, 0.227739, 0, -0.227739, -0.973722, 0, 13.7486, 0)
+light_energy = 0.99
+
+[node name="Player" parent="." instance=ExtResource("1_pyplb")]
+transform = Transform3D(-0.872052, 0, -0.489413, 0, 1, 0, 0.489413, 0, -0.872052, 11.8172, 2.32077, 5.40422)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.465, 4.1, 8.261)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_4yal2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_f0ae5")
+surface_material_override/0 = SubResource("StandardMaterial3D_j6ysn")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+texture_filter = 1
+offset_left = 702.0
+offset_top = 61.0
+offset_right = 1277.0
+offset_bottom = 961.0
+texture = SubResource("CompressedTexture2D_fcbkv")
+region_rect = Rect2(-0.109528, -0.0377636, 15.9891, 16.0464)
