@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcxf2m6ib2db"]
+[gd_scene load_steps=6 format=3 uid="uid://bcxf2m6ib2db"]
 
 [ext_resource type="Script" path="res://demo/demo.gd" id="1_w05t4"]
 [ext_resource type="PackedScene" uid="uid://exdngsew6m2l" path="res://demo/demo_meeple.tscn" id="2_1wdlr"]
+[ext_resource type="Script" path="res://demo/crosshair.gd" id="3_7vboa"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_b0v1h"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_l3iif"]
+font_size = 32
+
 [node name="Demo" type="Node3D"]
+process_mode = 3
 script = ExtResource("1_w05t4")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -19,3 +24,32 @@ transform = Transform3D(-0.0570587, -0.340398, 0.938549, 3.72529e-09, 0.94008, 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("WorldBoundaryShape3D_b0v1h")
+
+[node name="Crosshair" type="Node2D" parent="."]
+script = ExtResource("3_7vboa")
+
+[node name="PauseBox" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -221.5
+offset_right = 353.0
+offset_bottom = 221.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.196078, 0.196078, 0.74902)
+
+[node name="Label" type="Label" parent="PauseBox"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.995
+offset_bottom = -0.0400085
+text = "Paused!"
+label_settings = SubResource("LabelSettings_l3iif")
+horizontal_alignment = 1
+vertical_alignment = 1

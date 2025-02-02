@@ -1,5 +1,7 @@
 extends Node3D
 
+var paused = false
+
 func make_meeple() -> void:
   var ground_ray = PhysicsRayQueryParameters3D.create($Camera3D.global_position, $Camera3D.global_position + -$Camera3D.global_transform.basis.z * 1000)
   var space_state = get_world_3d().direct_space_state
@@ -13,6 +15,20 @@ func _ready() -> void:
   Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
+  if Input.is_action_just_pressed("ui_cancel"):
+    if paused:
+      resume_game()
+    else:
+      pause_game()
+  if Input.is_action_just_pressed("ui_press"):
+    if !paused:
+      make_meeple()
+    else:
+      resume_game()
+
+  if paused:
+    return
+
   var input_dir := Input.get_vector("ui_up", "ui_down", "ui_right", "ui_left")
   $Camera3D.position += $Camera3D.transform.basis.x * input_dir.y * delta * -10
   $Camera3D.position += $Camera3D.transform.basis.z * input_dir.x * delta * 10
@@ -21,7 +37,17 @@ func _physics_process(delta: float) -> void:
   $Camera3D.rotation.x -= mouse_motion.y * delta * 0.001
   $Camera3D.rotation.x = clamp($Camera3D.rotation.x, -PI/2, PI/2)
 
-  if Input.is_action_just_pressed("ui_cancel"):
-    Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-  if Input.is_action_just_pressed("ui_press"):
-    make_meeple()
+
+func pause_game() -> void:
+  paused = true
+  Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+  get_tree().paused = true
+  $Crosshair.visible = false
+  $PauseBox.visible = true
+
+func resume_game() -> void:
+  paused = false
+  get_tree().paused = false
+  Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+  $Crosshair.visible = true
+  $PauseBox.visible = false
