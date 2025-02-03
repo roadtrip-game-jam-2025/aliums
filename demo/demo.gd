@@ -2,17 +2,24 @@ extends Node3D
 
 var paused = false
 
-func make_meeple() -> void:
-  var ground_ray = PhysicsRayQueryParameters3D.create($Camera3D.global_position, $Camera3D.global_position + -$Camera3D.global_transform.basis.z * 1000)
-  var space_state = get_world_3d().direct_space_state
-  var collision = space_state.intersect_ray(ground_ray)
+func make_meeple(pos: Vector3) -> void:
   var new_meeple = load("res://demo/demo_meeple.tscn").instantiate()
   new_meeple.set_hair_color(Color(randf(), randf(), randf()))
-  new_meeple.position = collision.position if collision else $Camera3D.global_position
+  new_meeple.position = pos
   add_child(new_meeple)
 
 func _ready() -> void:
   Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+  for n in range(10):
+    make_meeple(Vector3(randf() * 10, 0, randf() * 10))
+
+func select_meeple() -> Node:
+  var ground_ray = PhysicsRayQueryParameters3D.create($Camera3D.global_position, $Camera3D.global_position + -$Camera3D.global_transform.basis.z * 1000, 2)
+  var space_state = get_world_3d().direct_space_state
+  var collision = space_state.intersect_ray(ground_ray)
+  if collision:
+    return collision.collider
+  return null
 
 func _physics_process(delta: float) -> void:
   if Input.is_action_just_pressed("ui_cancel"):
@@ -22,7 +29,9 @@ func _physics_process(delta: float) -> void:
       pause_game()
   if Input.is_action_just_pressed("ui_press"):
     if !paused:
-      make_meeple()
+      var meeple = select_meeple()
+      if meeple:
+        $/root/Demo/SelectedMeeplePanel.select_meeple(meeple)
     else:
       resume_game()
 
