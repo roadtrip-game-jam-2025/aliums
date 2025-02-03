@@ -2,6 +2,8 @@ extends Node3D
 
 var paused = false
 
+@onready var selected_meeple_panel: Panel = $SelectedMeeplePanel
+
 func make_meeple(pos: Vector3) -> void:
   var new_meeple = load("res://demo/demo_meeple.tscn").instantiate()
   new_meeple.set_hair_color(Color(randf(), randf(), randf()))
@@ -31,7 +33,9 @@ func _physics_process(delta: float) -> void:
     if !paused:
       var meeple = select_meeple()
       if meeple:
-        $/root/Demo/SelectedMeeplePanel.select_meeple(meeple)
+        pause_game()
+        $PauseBox.visible = false
+        selected_meeple_panel.select_meeple(meeple)
     else:
       resume_game()
 
@@ -60,3 +64,4 @@ func resume_game() -> void:
   Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
   $Crosshair.visible = true
   $PauseBox.visible = false
+  selected_meeple_panel.deselect_meeple()
