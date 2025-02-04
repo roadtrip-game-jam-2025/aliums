@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4qbdoqwv06a1"]
+
+[ext_resource type="Script" path="res://map_generator/map_generator.gd" id="1_j5aip"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fsiya"]
+noise_type = 3
+seed = 890
+frequency = 0.0013
+fractal_octaves = 10
+
+[node name="MapGenerator" type="Node2D"]
+script = ExtResource("1_j5aip")
+altitude_noise = SubResource("FastNoiseLite_fsiya")
+SEA_LEVEL = 0.001
+GAUSS_SIGMA = 1.26
+TARGET_LAND_RATIO = 0.3
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-4, 2)
