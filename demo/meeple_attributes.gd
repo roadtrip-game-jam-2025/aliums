@@ -3,6 +3,10 @@ extends Node
 const NAMES = [
   "Jack",
   "Jill",
+  "Kara",
+  "Bree",
+  "Carrie",
+  "Meeve",
 ]
 
 @export var display_name: String = NAMES[randi() % NAMES.size()]

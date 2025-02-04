@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://demo/demo.gd" id="1_w05t4"]
 [ext_resource type="Script" path="res://demo/crosshair.gd" id="3_7vboa"]
-[ext_resource type="PackedScene" uid="uid://x7ttfk6humos" path="res://selected_meeple_panel.tscn" id="3_pjbh4"]
+[ext_resource type="PackedScene" uid="uid://x7ttfk6humos" path="res://demo/selected_meeple_panel.tscn" id="3_pjbh4"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_b0v1h"]
 
