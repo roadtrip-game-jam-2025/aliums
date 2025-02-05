@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dldiaehexmetc"]
+
+[ext_resource type="Texture2D" uid="uid://c8xus6a41nr2g" path="res://Carrie_Testing/Character_Faces/Eye/Eye_Neutral.png" id="1_17beg"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_17beg")
