@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://x7ttfk6humos"]
 
-[ext_resource type="Script" path="res://demo/selected_meeple_panel.gd" id="1_s2xi0"]
+[ext_resource type="Script" path="res://character_selection_demo/selected_meeple_panel.gd" id="1_s2xi0"]
 
 [sub_resource type="World3D" id="World3D_qukml"]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://exdngsew6m2l"]
 
-[ext_resource type="Script" path="res://demo/demo_meeple.gd" id="1_ydkt1"]
+[ext_resource type="Script" path="res://character_selection_demo/demo_meeple.gd" id="1_ydkt1"]
 [ext_resource type="PackedScene" uid="uid://w8jrjwgt3j2c" path="res://Meeple/meeple.tscn" id="2_6eoq8"]
-[ext_resource type="Script" path="res://demo/meeple_attributes.gd" id="3_rfh58"]
+[ext_resource type="Script" path="res://character_selection_demo/meeple_attributes.gd" id="3_rfh58"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uph03"]
 radius = 0.562239
