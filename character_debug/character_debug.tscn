@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://cp0f0q403d4se"]
+
+[ext_resource type="PackedScene" uid="uid://w8jrjwgt3j2c" path="res://Meeple/meeple.tscn" id="1_k8wb4"]
+[ext_resource type="Theme" uid="uid://dbcrs2o8w2e64" path="res://debug_theme.tres" id="2_hmxd7"]
+[ext_resource type="Script" path="res://character_debug/color_picker_select.gd" id="3_efoeq"]
+[ext_resource type="Script" path="res://character_debug/skin_tone_manager.gd" id="5_uepik"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8cvr1"]
+font_size = 32
+
+[node name="CharacterDebug" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86245, 2.55301, 4.88059)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.93495)
+
+[node name="Meeple" parent="." instance=ExtResource("1_k8wb4")]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.344969, -4.76837e-07, -0.0395773)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 469.0
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
+layout_mode = 2
+vertical = true
+
+[node name="Label" type="Label" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+text = "Character Tester"
+label_settings = SubResource("LabelSettings_8cvr1")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_hmxd7")
+text = "Randomize!"
+
+[node name="Button2" type="Button" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_hmxd7")
+text = "Set all pieces to last added"
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="BoxContainer" type="HBoxContainer" parent="MarginContainer/BoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer"]
+layout_mode = 2
+text = "Skin tone tint"
+
+[node name="ColorPickerSelect" type="ColorPickerButton" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+color = Color(0.56, 0.31892, 0.2072, 1)
+script = ExtResource("3_efoeq")
+signal_name = "skin_tone_changed"
+
+[node name="BoxContainer2" type="HBoxContainer" parent="MarginContainer/BoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer2"]
+layout_mode = 2
+text = "Hair tint"
+
+[node name="ColorPickerSelect" type="ColorPickerButton" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+color = Color(0.704421, 0.0288518, 0.392032, 1)
+script = ExtResource("3_efoeq")
+signal_name = "hair_color_changed"
+
+[node name="SkinToneManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_uepik")
