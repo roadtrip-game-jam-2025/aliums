@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bcxf2m6ib2db"]
 
 [ext_resource type="Script" path="res://character_selection_demo/demo.gd" id="1_35y8a"]
-[ext_resource type="PackedScene" uid="uid://d1le8vysmt41f" path="res://utils/demo_camera.tscn" id="2_njkvu"]
+[ext_resource type="PackedScene" uid="uid://d1le8vysmt41f" path="res://utils/debug_camera.tscn" id="2_njkvu"]
 [ext_resource type="Script" path="res://character_selection_demo/crosshair.gd" id="3_02kyh"]
 [ext_resource type="PackedScene" uid="uid://x7ttfk6humos" path="res://character_selection_demo/selected_meeple_panel.tscn" id="4_mpgee"]
 
@@ -16,7 +16,10 @@ script = ExtResource("1_35y8a")
 
 [node name="DemoCamera" parent="." instance=ExtResource("2_njkvu")]
 process_mode = 1
-transform = Transform3D(-0.507508, -0.587301, 0.630486, 0, 0.731723, 0.681603, -0.861647, 0.345919, -0.371355, 12.991, 7.481, -0.717)
+transform = Transform3D(-0.507508, -0.587301, 0.630486, 0, 0.731723, 0.681603, -0.861647, 0.345919, -0.371355, 19.8365, 14.8815, -4.749)
+fov = 37.8493
+size = 3.599
+frustum_offset = Vector2(0.54, 0.86)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="DemoCamera"]
 transform = Transform3D(-0.0570587, -0.340398, 0.938549, 3.72529e-09, 0.94008, 0.340954, -0.998371, 0.0194544, -0.0536397, 0.0045929, 0.0144458, 0.00321525)
