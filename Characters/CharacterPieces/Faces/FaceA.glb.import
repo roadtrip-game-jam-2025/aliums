@@ -31,6 +31,21 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Eyebrows": {
+"use_external/enabled": true,
+"use_external/path": "res://Characters/CharacterPieces/Faces/Materials/FaceA_Eyebrow_Neutral.tres"
+},
+"Eyes": {
+"use_external/enabled": true,
+"use_external/path": "res://Characters/CharacterPieces/Faces/Materials/FaceA_Eye_Neutral.tres"
+},
+"Mouth": {
+"use_external/enabled": true,
+"use_external/path": "res://Characters/CharacterPieces/Faces/Materials/FaceA_Mouth_Netural.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

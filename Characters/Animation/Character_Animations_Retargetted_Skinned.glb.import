@@ -32,6 +32,20 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
+"materials": {
+"Eyebrows": {
+"use_external/enabled": true,
+"use_external/path": "res://Characters/CharacterPieces/Faces/Materials/FaceA_Eyebrow_Neutral.tres"
+},
+"Eyes": {
+"use_external/enabled": true,
+"use_external/path": "res://Characters/CharacterPieces/Faces/Materials/FaceA_Eye_Neutral.tres"
+},
+"Mouth": {
+"use_external/enabled": true,
+"use_external/path": "res://Characters/CharacterPieces/Faces/Materials/FaceA_Mouth_Netural.tres"
+}
+},
 "meshes": {
 "Character_Animations_Retargetted_Skinned_Cylinder_001": {
 "generate/lightmap_uv": 0,

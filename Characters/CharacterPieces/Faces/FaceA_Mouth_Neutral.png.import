@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc6fcmf3enyxa"
-path.s3tc="res://.godot/imported/Character_Animations_Retargetted_Skinned_FaceA_Eyebrow_Netural.png-d620d83d736d987c4e46050f9ffeba24.s3tc.ctex"
+uid="uid://bfeqv4x8c1yth"
+path.s3tc="res://.godot/imported/FaceA_Mouth_Neutral.png-ce054f116542760e0da70a9e84297247.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "b174f968e5cee73f1d8d0e1588a5ad28"
-}
 
 [deps]
 
-source_file="res://Characters/Animation/Character_Animations_Retargetted_Skinned_FaceA_Eyebrow_Netural.png"
-dest_files=["res://.godot/imported/Character_Animations_Retargetted_Skinned_FaceA_Eyebrow_Netural.png-d620d83d736d987c4e46050f9ffeba24.s3tc.ctex"]
+source_file="res://Characters/CharacterPieces/Faces/FaceA_Mouth_Neutral.png"
+dest_files=["res://.godot/imported/FaceA_Mouth_Neutral.png-ce054f116542760e0da70a9e84297247.s3tc.ctex"]
 
 [params]
 
