@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cw1mipwlihqoj"
-path="res://.godot/imported/Character_Animations_Retargetted_Skinned.glb-d81783ef85e78fe0351c4178588b32fd.scn"
+uid="uid://3hn6ob1wtpan"
+path="res://.godot/imported/OutfitB_Testing.glb-a81cd4daa669ecc01ae1925a833b924c.scn"
 
 [deps]
 
-source_file="res://Characters/Animation/Character_Animations_Retargetted_Skinned.glb"
-dest_files=["res://.godot/imported/Character_Animations_Retargetted_Skinned.glb-d81783ef85e78fe0351c4178588b32fd.scn"]
+source_file="res://Characters/CharacterPieces/OutfitB_Testing.glb"
+dest_files=["res://.godot/imported/OutfitB_Testing.glb-a81cd4daa669ecc01ae1925a833b924c.scn"]
 
 [params]
 
@@ -33,32 +33,28 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "meshes": {
-"Character_Animations_Retargetted_Skinned_Cylinder_001": {
+"OutfitB_Testing_Cylinder_006": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Characters/CharacterPieces/Bottoms/CharacterBase_Bottom.res"
+"save_to_file/path": "res://Characters/CharacterPieces/Tops/OutfitB_Top.res"
 },
-"Character_Animations_Retargetted_Skinned_Cylinder_002": {
+"OutfitB_Testing_Cylinder_007": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Characters/CharacterPieces/Tops/CharacterBase_Top.res"
+"save_to_file/path": "res://Characters/CharacterPieces/Bottoms/OutfitB_Bottom.res"
+}
 },
-"Character_Animations_Retargetted_Skinned_Cylinder_014": {
-"generate/lightmap_uv": 0,
-"generate/lods": 0,
-"generate/shadow_meshes": 0,
-"lods/normal_merge_angle": 60.0,
-"lods/normal_split_angle": 25.0,
-"save_to_file/enabled": true,
-"save_to_file/path": "res://Characters/CharacterPieces/Faces/CharacterBase_Face.res"
+"nodes": {
+"PATH:AnimationPlayer": {
+"import/skip_import": true
 }
 }
 }
