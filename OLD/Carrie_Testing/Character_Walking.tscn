@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://boi2bm2xumbwl"]
+
+[ext_resource type="PackedScene" uid="uid://d380rsikaqfql" path="res://OLD/Carrie_Testing/Character.glb" id="1_yatdq"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Character" parent="." instance=ExtResource("1_yatdq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0651937, 0, -0.487484)
