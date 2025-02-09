@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cp0f0q403d4se"]
 
-[ext_resource type="PackedScene" uid="uid://w8jrjwgt3j2c" path="res://Meeple/meeple.tscn" id="1_k8wb4"]
+[ext_resource type="PackedScene" uid="uid://w8jrjwgt3j2c" path="res://OLD/Meeple/meeple.tscn" id="1_k8wb4"]
 [ext_resource type="Theme" uid="uid://dbcrs2o8w2e64" path="res://debug_theme.tres" id="2_hmxd7"]
 [ext_resource type="Script" path="res://character_debug/color_picker_select.gd" id="3_efoeq"]
 [ext_resource type="Script" path="res://character_debug/skin_tone_manager.gd" id="5_uepik"]

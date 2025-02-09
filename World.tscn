@@ -23,7 +23,6 @@ metallic = 0.65
 metallic_specular = 0.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fcbkv"]
-load_path = "res://.godot/imported/window.png-be7b06f66c81a4a75d8c64b23481294c.ctex"
 
 [node name="Main" type="Node3D"]
 

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://ponvpl1ha0ek"]
+
+[ext_resource type="PackedScene" uid="uid://cw1mipwlihqoj" path="res://Characters/Animation/Character_Animations_Retargetted_Skinned.glb" id="1_2cf8t"]
+
+[node name="Character_Animations_Retargetted_Skinned" instance=ExtResource("1_2cf8t")]
