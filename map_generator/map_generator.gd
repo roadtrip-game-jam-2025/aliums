@@ -5,53 +5,39 @@ extends Node2D
 enum TileType { LAND, SEA }
 
 const TILE_SIZE = 5
-@export var SEA_LEVEL = 0.01
-@export var GAUSS_SIGMA = 1.0
-const RENDER_DISTANCE = 128.0
-@export var TARGET_LAND_RATIO = 0.5
+@export var sea_level = 0.01
+@export var center_weight = 1.0
+@export var map_width = 128
+@export var minimum_land_ratio = 0.5
+@export var max_attempts = 100
 
+var generated_map: Dictionary = {}
 var tiles: Dictionary = {}
 
 func _ready() -> void:
   altitude_noise.seed = randi_range(0,2048)
 
 func generate_continent() -> void:
-  for m in RENDER_DISTANCE:
-    for n in RENDER_DISTANCE:
-      var x = n - RENDER_DISTANCE / 2.0
-      var y = m - RENDER_DISTANCE / 2.0
+  for m in map_width:
+    for n in map_width:
+      var x = n - map_width / 2.0
+      var y = m - map_width / 2.0
       var value = altitude_value(x, y)
-      tiles[Vector2i(x, y)] = value
+      tiles[Vector2i(int(x), int(y))] = value
 
-func _draw() -> void:
-  for n in range(RENDER_DISTANCE):
-    # We divide by two so that half the tiles
-    # generate left/above center and half right/below
-    var x = n - RENDER_DISTANCE / 2.0
-
-    for pos in tiles.keys():
-      var color
-      if tiles[pos] == TileType.LAND:
-        color = Color(0.0, 1.0, 0.0)
-      else:
-        color = Color(0.0, 0.0, 1.0)
-      var r = Rect2i(pos.x*TILE_SIZE, pos.y*TILE_SIZE, TILE_SIZE, TILE_SIZE)
-      draw_rect(r, color)
-
-func altitude_value(x: int, y: int) -> TileType:
+func altitude_value(x: float, y: float) -> TileType:
     var value = altitude_noise.get_noise_2d(x, y)
     var center = Vector2(0,0)
     var distance = sqrt((x-center.x)*(x-center.x) + (y-center.y)*(y-center.y))
-    value *= exp(-GAUSS_SIGMA * distance / (RENDER_DISTANCE * 0.5))
+    value *= exp(-center_weight * distance / (map_width * 0.5))
 
-    if value >= SEA_LEVEL:
+    if value >= sea_level:
         return TileType.LAND
 
     return TileType.SEA
 
-var running = true
-func _process(_delta: float) -> void:
-  if running:
+func generate_map() -> void:
+  for _i in range(max_attempts):
     altitude_noise.seed = randi_range(0,2048)
     tiles = {}
     generate_continent()
@@ -59,11 +45,10 @@ func _process(_delta: float) -> void:
     tiles = {}
     for pos in continent.keys():
       tiles[pos] = TileType.LAND
-    queue_redraw()
-    if continent.keys().size() > TARGET_LAND_RATIO * RENDER_DISTANCE * RENDER_DISTANCE:
-      running = false
-  if Input.is_action_just_pressed("ui_press"):
-    running = not running
+    if continent.keys().size() > minimum_land_ratio * map_width * map_width:
+      generated_map = continent
+      break
+  assert(generated_map.keys().size() > 0, "Failed to generate map")
 
 func largest_connected_land_component() -> Dictionary:
     var visited = {}
