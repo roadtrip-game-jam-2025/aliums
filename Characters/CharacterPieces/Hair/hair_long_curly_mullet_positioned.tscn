@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://q5tey8py02u2"]
-
-[ext_resource type="PackedScene" uid="uid://eaqmfk4bkckk" path="res://Characters/CharacterPieces/Hair/Hair_LongCurlyMullet_Pivot.glb" id="1_k0g75"]
-
-[node name="Hair_LongCurlyMullet_Pivot2" instance=ExtResource("1_k0g75")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.305711, 0)
-
-[node name="Hair_LongCurlyMullet_Pivot" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00254998, 0.586807, 0.0871278)
