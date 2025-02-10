@@ -31,10 +31,12 @@ theme_override_constants/margin_top = 24
 
 [node name="BoxContainer" type="BoxContainer" parent="MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 18
 vertical = true
 
 [node name="Label" type="Label" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_hmxd7")
 text = "Character Tester"
 label_settings = SubResource("LabelSettings_8cvr1")
 horizontal_alignment = 1
@@ -52,15 +54,20 @@ text = "Set all pieces to last added"
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
+columns = 2
 
-[node name="BoxContainer" type="HBoxContainer" parent="MarginContainer/BoxContainer/GridContainer"]
+[node name="BoxContainer2" type="VBoxContainer" parent="MarginContainer/BoxContainer/GridContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer2"]
 layout_mode = 2
 text = "Skin tone tint"
 
-[node name="SkinTonePicker" type="ColorPickerButton" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer"]
+[node name="BoxContainer3" type="VBoxContainer" parent="MarginContainer/BoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="SkinTonePicker" type="ColorPickerButton" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer3"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
@@ -68,14 +75,15 @@ color = Color(0.56, 0.31892, 0.2072, 1)
 script = ExtResource("3_efoeq")
 signal_name = "skin_tone_changed"
 
-[node name="BoxContainer2" type="HBoxContainer" parent="MarginContainer/BoxContainer/GridContainer"]
+[node name="BoxContainer" type="VBoxContainer" parent="MarginContainer/BoxContainer/GridContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer2"]
+[node name="Label2" type="Label" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer"]
 layout_mode = 2
 text = "Hair tint"
 
-[node name="HairColorPicker" type="ColorPickerButton" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer2"]
+[node name="HairColorPicker" type="ColorPickerButton" parent="MarginContainer/BoxContainer/GridContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
