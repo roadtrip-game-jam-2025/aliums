@@ -31,6 +31,18 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"Hair_LongCurlyMullet_Pivot_Cylinder_005": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 32.3,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Characters/CharacterPieces/Hair/Hair_LongCurlyMullet.res"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
