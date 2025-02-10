@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cp0f0q403d4se"]
+[gd_scene load_steps=8 format=3 uid="uid://cp0f0q403d4se"]
 
-[ext_resource type="PackedScene" uid="uid://w8jrjwgt3j2c" path="res://OLD/Meeple/meeple.tscn" id="1_k8wb4"]
+[ext_resource type="PackedScene" uid="uid://wk134ykl3tsb" path="res://Characters/Character.tscn" id="1_p5q2p"]
 [ext_resource type="Theme" uid="uid://dbcrs2o8w2e64" path="res://debug_theme.tres" id="2_hmxd7"]
+[ext_resource type="Script" path="res://character_debug/randomize_button.gd" id="3_ad331"]
 [ext_resource type="Script" path="res://character_debug/color_picker_select.gd" id="3_efoeq"]
+[ext_resource type="Script" path="res://character_debug/animation_dropdown.gd" id="4_1ftf8"]
 [ext_resource type="Script" path="res://character_debug/skin_tone_manager.gd" id="5_uepik"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8cvr1"]
@@ -16,9 +18,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86245, 2.55301, 4.88059)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.93495)
 
-[node name="Meeple" parent="." instance=ExtResource("1_k8wb4")]
+[node name="Meeple" parent="." instance=ExtResource("1_p5q2p")]
 unique_name_in_owner = true
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.344969, -4.76837e-07, -0.0395773)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 9
@@ -38,12 +39,13 @@ text = "Character Tester"
 label_settings = SubResource("LabelSettings_8cvr1")
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="MarginContainer/BoxContainer"]
+[node name="RandomizeButton" type="Button" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_hmxd7")
 text = "Randomize!"
+script = ExtResource("3_ad331")
 
-[node name="Button2" type="Button" parent="MarginContainer/BoxContainer"]
+[node name="UniformizeButton" type="Button" parent="MarginContainer/BoxContainer"]
 layout_mode = 2
 theme = ExtResource("2_hmxd7")
 text = "Set all pieces to last added"
@@ -58,7 +60,8 @@ layout_mode = 2
 layout_mode = 2
 text = "Skin tone tint"
 
-[node name="ColorPickerSelect" type="ColorPickerButton" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer"]
+[node name="SkinTonePicker" type="ColorPickerButton" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 color = Color(0.56, 0.31892, 0.2072, 1)
@@ -72,12 +75,19 @@ layout_mode = 2
 layout_mode = 2
 text = "Hair tint"
 
-[node name="ColorPickerSelect" type="ColorPickerButton" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer2"]
+[node name="HairColorPicker" type="ColorPickerButton" parent="MarginContainer/BoxContainer/GridContainer/BoxContainer2"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 color = Color(0.704421, 0.0288518, 0.392032, 1)
 script = ExtResource("3_efoeq")
 signal_name = "hair_color_changed"
+
+[node name="AnimationDropdown" type="OptionButton" parent="MarginContainer/BoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_hmxd7")
+script = ExtResource("4_1ftf8")
 
 [node name="SkinToneManager" type="Node" parent="."]
 unique_name_in_owner = true
