@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cp0f0q403d4se"]
+[gd_scene load_steps=10 format=3 uid="uid://cp0f0q403d4se"]
 
 [ext_resource type="PackedScene" uid="uid://wk134ykl3tsb" path="res://Characters/Character.tscn" id="1_p5q2p"]
 [ext_resource type="Theme" uid="uid://dbcrs2o8w2e64" path="res://debug_theme.tres" id="2_hmxd7"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://character_debug/color_picker_select.gd" id="3_efoeq"]
 [ext_resource type="Script" path="res://character_debug/animation_dropdown.gd" id="4_1ftf8"]
 [ext_resource type="Script" path="res://character_debug/skin_tone_manager.gd" id="5_uepik"]
+[ext_resource type="Script" path="res://character_debug/outfit_dropdown.gd" id="6_0cjmi"]
+[ext_resource type="Script" path="res://character_debug/outfit_manager.gd" id="7_wackm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8cvr1"]
 font_size = 32
@@ -13,7 +15,8 @@ font_size = 32
 [node name="CharacterDebug" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.86245, 2.55301, 4.88059)
+transform = Transform3D(1, 0, 0, 0, 0.988741, 0.149639, 0, -0.149639, 0.988741, -0.488245, 4.0352, 9.4528)
+fov = 37.5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.93495)
@@ -97,6 +100,31 @@ layout_mode = 2
 theme = ExtResource("2_hmxd7")
 script = ExtResource("4_1ftf8")
 
+[node name="TopDropdown" type="OptionButton" parent="MarginContainer/BoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_hmxd7")
+script = ExtResource("6_0cjmi")
+piece_type = "Tops"
+
+[node name="BottomDropdown" type="OptionButton" parent="MarginContainer/BoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_hmxd7")
+script = ExtResource("6_0cjmi")
+piece_type = "Bottoms"
+
+[node name="ShoesDropdown" type="OptionButton" parent="MarginContainer/BoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_hmxd7")
+script = ExtResource("6_0cjmi")
+piece_type = "Shoes"
+
 [node name="SkinToneManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("5_uepik")
+
+[node name="OutfitManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("7_wackm")
