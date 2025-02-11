@@ -1,12 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://wk134ykl3tsb"]
+[gd_scene load_steps=15 format=3 uid="uid://wk134ykl3tsb"]
 
 [ext_resource type="ArrayMesh" uid="uid://c85lc0tipbnib" path="res://Characters/CharacterPieces/Shoes/ShoesB_ChelseaBoots_L.res" id="1_bbcng"]
-[ext_resource type="ArrayMesh" uid="uid://cbtre3lq7sydn" path="res://Characters/CharacterPieces/Bottoms/OutfitB_Bottom.res" id="1_if3ej"]
 [ext_resource type="Script" path="res://Characters/character.gd" id="1_js0g4"]
 [ext_resource type="ArrayMesh" uid="uid://djvwxcqoixlu5" path="res://Characters/CharacterPieces/Bottoms/CharacterBase_Bottom.res" id="1_uouy3"]
 [ext_resource type="ArrayMesh" uid="uid://1wr2i8xymnta" path="res://Characters/CharacterPieces/Shoes/ShoesB_ChelseaBoots_R.res" id="2_8cw7i"]
 [ext_resource type="Skin" uid="uid://bwbne2j8ikusu" path="res://Characters/CharacterPieces/CharacterBase_Skin.tres" id="2_08uud"]
-[ext_resource type="ArrayMesh" uid="uid://dyyank8e6uxgl" path="res://Characters/CharacterPieces/Tops/OutfitB_Top.res" id="2_21b4y"]
 [ext_resource type="ArrayMesh" uid="uid://dxe4a4rlck5al" path="res://Characters/CharacterPieces/Faces/CharacterBase_Face.res" id="3_vwtrl"]
 [ext_resource type="ArrayMesh" uid="uid://bkvramernmxns" path="res://Characters/CharacterPieces/Tops/CharacterBase_Top.res" id="4_elrmm"]
 [ext_resource type="ArrayMesh" uid="uid://dibn21xhekxpd" path="res://Characters/CharacterPieces/Hair/Hair_LongCurlyMullet.res" id="8_4tfpd"]
@@ -1566,16 +1564,6 @@ bones/40/position = Vector3(2.6921e-10, 0.160803, 2.32831e-10)
 bones/40/rotation = Quaternion(4.092e-08, 3.15292e-06, -1.34387e-08, 1)
 bones/40/scale = Vector3(1, 1, 1)
 
-[node name="OutfitBBottom" type="MeshInstance3D" parent="Anim_Base/Skeleton3D"]
-visible = false
-mesh = ExtResource("1_if3ej")
-blend_shapes/LargerCharacterSize = 0.0
-
-[node name="OutfitBTop" type="MeshInstance3D" parent="Anim_Base/Skeleton3D"]
-visible = false
-mesh = ExtResource("2_21b4y")
-blend_shapes/LargerCharacterSize = 0.0
-
 [node name="LowerBody" type="MeshInstance3D" parent="Anim_Base/Skeleton3D"]
 mesh = ExtResource("1_uouy3")
 skin = ExtResource("2_08uud")
@@ -1605,7 +1593,7 @@ transform = Transform3D(-0.999776, -0.0148653, 0.0150437, 0.0211389, -0.724593, 
 bone_name = "mixamorig_RightFoot"
 bone_idx = 38
 
-[node name="ShoesBChelseaBootsR" type="MeshInstance3D" parent="Anim_Base/Skeleton3D/RightFootBoneAttachment3D"]
+[node name="RightShoe" type="MeshInstance3D" parent="Anim_Base/Skeleton3D/RightFootBoneAttachment3D"]
 transform = Transform3D(-0.991883, 0.0626605, 0.110641, 0.0412133, -0.66474, 0.745937, 0.120288, 0.744443, 0.656762, -0.242948, 0.139449, -0.212818)
 mesh = ExtResource("2_8cw7i")
 skeleton = NodePath("../../../..")
@@ -1615,7 +1603,7 @@ transform = Transform3D(-0.997417, -0.0618933, 0.0364582, 0.071791, -0.841559, 0
 bone_name = "mixamorig_LeftFoot"
 bone_idx = 33
 
-[node name="ShoesBChelseaBootsL" type="MeshInstance3D" parent="Anim_Base/Skeleton3D/LeftFootBoneAttachment3D"]
+[node name="LeftShoe" type="MeshInstance3D" parent="Anim_Base/Skeleton3D/LeftFootBoneAttachment3D"]
 transform = Transform3D(-0.992102, -0.0627484, -0.108604, -0.0407665, -0.657551, 0.752304, -0.118619, 0.750798, 0.649794, 0.242825, 0.137515, -0.214037)
 mesh = ExtResource("1_bbcng")
 skeleton = NodePath("../..")
