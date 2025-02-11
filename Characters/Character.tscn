@@ -1569,10 +1569,12 @@ bones/40/scale = Vector3(1, 1, 1)
 [node name="OutfitBBottom" type="MeshInstance3D" parent="Anim_Base/Skeleton3D"]
 visible = false
 mesh = ExtResource("1_if3ej")
+blend_shapes/LargerCharacterSize = 0.0
 
 [node name="OutfitBTop" type="MeshInstance3D" parent="Anim_Base/Skeleton3D"]
 visible = false
 mesh = ExtResource("2_21b4y")
+blend_shapes/LargerCharacterSize = 0.0
 
 [node name="LowerBody" type="MeshInstance3D" parent="Anim_Base/Skeleton3D"]
 mesh = ExtResource("1_uouy3")
@@ -1594,7 +1596,7 @@ bone_name = "mixamorig_Head"
 bone_idx = 5
 
 [node name="Hair" type="MeshInstance3D" parent="Anim_Base/Skeleton3D/HairBone"]
-transform = Transform3D(1, 0, 0, 0, 1, -9.58861e-08, 0, 9.58861e-08, 1, 0, 0.252445, 0.0836957)
+transform = Transform3D(1, -1.49012e-08, 0, -1.86265e-09, 1, -8.9407e-08, -2.23517e-08, 0, 1, 0.0106318, 0.224755, 0.00516641)
 mesh = ExtResource("8_4tfpd")
 skeleton = NodePath("../..")
 
