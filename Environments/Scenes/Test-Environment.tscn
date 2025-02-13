@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c2xlx03kanghj"]
+[gd_scene load_steps=39 format=3 uid="uid://c2xlx03kanghj"]
 
 [ext_resource type="PackedScene" uid="uid://efqdcf4rgvjq" path="res://Environments/Test/Environments_testing.glb" id="1_esi7j"]
 [ext_resource type="PackedScene" uid="uid://d1le8vysmt41f" path="res://utils/debug_camera.tscn" id="2_v2tfx"]
@@ -21,6 +21,15 @@
 [ext_resource type="ArrayMesh" uid="uid://30l5sob5n6iu" path="res://Environments/Assets_Res/Natural/Rocks/SmallRockB.res" id="19_i88pi"]
 [ext_resource type="ArrayMesh" uid="uid://b28r5xsyiupfj" path="res://Environments/Assets_Res/Natural/Rocks/SmallRockD.res" id="20_gk075"]
 [ext_resource type="ArrayMesh" uid="uid://dvmpbp8a1jdlh" path="res://Environments/Assets_Res/Natural/Rocks/SmallRockC.res" id="21_qlt4l"]
+[ext_resource type="ArrayMesh" uid="uid://dj5b1xg7rgurd" path="res://Environments/Assets_Res/City/DumpsterBase.res" id="22_osmqy"]
+[ext_resource type="ArrayMesh" uid="uid://bxxps25mspeof" path="res://Environments/Assets_Res/City/DumpsterLids.res" id="23_v7chx"]
+[ext_resource type="ArrayMesh" uid="uid://enbrct5pcsxh" path="res://Environments/Assets_Res/City/Mailbox.res" id="24_elak4"]
+[ext_resource type="ArrayMesh" uid="uid://rwpsenytayf0" path="res://Environments/Assets_Res/City/StopSign.res" id="25_ua4rd"]
+[ext_resource type="ArrayMesh" uid="uid://q1025jwrvkuk" path="res://Environments/Assets_Res/City/TelephonePole.res" id="26_wxyq2"]
+[ext_resource type="ArrayMesh" uid="uid://cuyxq3nkcand" path="res://Environments/Assets_Res/City/Tire.res" id="27_udens"]
+[ext_resource type="Material" uid="uid://bgthwhdvvamnc" path="res://Environments/Materials/Environment.tres" id="28_kwpff"]
+[ext_resource type="ArrayMesh" uid="uid://cmabyg0kyslht" path="res://Environments/Assets_Res/City/TrafficCone.res" id="28_tlu7g"]
+[ext_resource type="ArrayMesh" uid="uid://didb3nagc3ju8" path="res://Environments/Assets_Res/City/TrafficLight.res" id="29_ta0nn"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hps0x"]
 
@@ -218,3 +227,44 @@ mesh = ExtResource("21_qlt4l")
 [node name="SmallRockC2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.46038, -2.38419e-07, 9.34579)
 mesh = ExtResource("21_qlt4l")
+
+[node name="DumpsterBase" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.432432, 0, 0.901667, 0, 1, 0, -0.901667, 0, -0.432432, -12.9927, 0, 7.45736)
+mesh = ExtResource("22_osmqy")
+
+[node name="DumpsterLids" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.432432, 0, 0.901667, 0, 1, 0, -0.901667, 0, -0.432432, -12.9927, 0, 7.45736)
+mesh = ExtResource("23_v7chx")
+
+[node name="DumpsterBase2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.650443, 0, 0.759555, 0, 1, 0, -0.759555, 0, -0.650443, -16.7659, 0, 11.7766)
+mesh = ExtResource("22_osmqy")
+
+[node name="Mailbox" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.839772, 0, 0.54294, 0, 1, 0, -0.54294, 0, -0.839772, -5.94754, 0, 10.2057)
+mesh = ExtResource("24_elak4")
+
+[node name="StopSign" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.602971, 0, 0.797763, 0, 1, 0, -0.797763, 0, 0.602971, 6.07498, 0, 11.2182)
+mesh = ExtResource("25_ua4rd")
+
+[node name="TelephonePole" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.539462, 0, 0.84201, 0, 1, 0, -0.84201, 0, 0.539462, 12.2913, 0, 8.67948)
+mesh = ExtResource("26_wxyq2")
+
+[node name="Tire" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.938076, -0.346428, 0, 0.346428, 0.938076, 3.62586, 0.387359, 9.96839)
+mesh = ExtResource("27_udens")
+
+[node name="TrafficCone" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.703667, 0, 12.1509)
+material_override = ExtResource("28_kwpff")
+mesh = ExtResource("28_tlu7g")
+
+[node name="TrafficLight" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.103313, 0, 0.994649, 0, 1, 0, -0.994649, 0, 0.103313, 13.9903, 0, 15.4078)
+mesh = ExtResource("29_ta0nn")
+
+[node name="TrafficCone2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6555, 0, 11.7271)
+mesh = ExtResource("28_tlu7g")
