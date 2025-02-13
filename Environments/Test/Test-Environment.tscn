@@ -1,0 +1,140 @@
+[gd_scene load_steps=16 format=3 uid="uid://c2xlx03kanghj"]
+
+[ext_resource type="PackedScene" uid="uid://d1le8vysmt41f" path="res://utils/debug_camera.tscn" id="2_mdtrb"]
+[ext_resource type="PackedScene" uid="uid://efqdcf4rgvjq" path="res://Environments/Test/Environments_testing.glb" id="2_xspoa"]
+[ext_resource type="PackedScene" uid="uid://wk134ykl3tsb" path="res://Characters/Character.tscn" id="3_iq25e"]
+[ext_resource type="ArrayMesh" uid="uid://d2g3838aqisli" path="res://Environments/Assets/Tree_Birch.res" id="4_velp5"]
+[ext_resource type="Texture2D" uid="uid://ddecimyb4u3ub" path="res://Environments/Textures/NoiseTexture.png" id="5_ye1tg"]
+[ext_resource type="Shader" uid="uid://dts5n6pd614qj" path="res://Environments/Materials/Environment_Vertex.tres" id="5_ynlud"]
+[ext_resource type="Texture2D" uid="uid://bcas22va6rpkb" path="res://Environments/Textures/BlendTexture.png" id="6_tyhn1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hps0x"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x1h0a"]
+sky_top_color = Color(0.126317, 0.448816, 0.794597, 1)
+sky_horizon_color = Color(0.0401178, 0.126136, 0.355491, 1)
+sky_curve = 0.454714
+ground_bottom_color = Color(0.225893, 0.191851, 0.152324, 1)
+ground_curve = 0.0156917
+sun_angle_max = 13.79
+sun_curve = 0.197926
+
+[sub_resource type="Sky" id="Sky_eppwk"]
+sky_material = SubResource("ProceduralSkyMaterial_x1h0a")
+
+[sub_resource type="Environment" id="Environment_hj8bn"]
+background_mode = 2
+background_color = Color(0, 0.00162157, 0.0491656, 1)
+background_energy_multiplier = 2.08
+sky = SubResource("Sky_eppwk")
+sky_rotation = Vector3(0, 0.654498, 0)
+ambient_light_source = 3
+ambient_light_color = Color(0.4, 0, 0.14, 1)
+ambient_light_sky_contribution = 0.55
+ambient_light_energy = 10.39
+reflected_light_source = 2
+ssao_enabled = true
+fog_light_color = Color(0.616379, 0.649052, 0.700388, 1)
+fog_height = 27.95
+fog_height_density = -0.032
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_albedo = Color(0.452467, 0.714066, 0.814319, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_anisotropy = 0.53
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vj3je"]
+exposure_multiplier = 1.445
+dof_blur_far_distance = 10.4
+
+[sub_resource type="FogMaterial" id="FogMaterial_eya5y"]
+resource_local_to_scene = true
+density = 7.0121
+emission = Color(0.984314, 0.309804, 0, 1)
+height_falloff = 1.45434
+edge_fade = 3.80546
+
+[sub_resource type="FogMaterial" id="FogMaterial_y62rh"]
+resource_local_to_scene = true
+density = 7.0121
+emission = Color(0.933101, 0.835342, 0.995125, 1)
+height_falloff = 1.45434
+edge_fade = 3.80546
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sg2kp"]
+render_priority = 0
+shader = ExtResource("5_ynlud")
+shader_parameter/DisplacementEverywhere = false
+shader_parameter/TimeScale = 0.305
+shader_parameter/Intensity = 0.825
+shader_parameter/Noise = ExtResource("5_ye1tg")
+shader_parameter/UVMask = ExtResource("6_tyhn1")
+
+[node name="Test-environment" type="Node3D"]
+
+[node name="EnvironmentMeshes" type="Node3D" parent="."]
+transform = Transform3D(3.34044, 0, 0, 0, 2.23316, 0, 0, 0, 1.11902, 0, -0.32817, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnvironmentMeshes"]
+transform = Transform3D(19.3205, 0, 0, 0, 0.410119, 0, 0, 0, 59.1271, 0.0272078, -0.00927074, -0.280147)
+mesh = SubResource("BoxMesh_hps0x")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="EnvironmentMeshes"]
+transform = Transform3D(4.614, 0, 1.04738, 0, 4.42183, 0, -1.6205, 0, 2.98217, -2.94488, -1.76776, 1.179)
+mesh = SubResource("BoxMesh_hps0x")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="EnvironmentMeshes"]
+transform = Transform3D(4.59255, -0.435412, 0.227808, 3.20059, 0.624776, 0.158761, -1.96602, 0, 0.790605, -3.02478, 1.45682, 0.0931197)
+mesh = SubResource("BoxMesh_hps0x")
+skeleton = NodePath("../..")
+
+[node name="Environments_testing" parent="EnvironmentMeshes" instance=ExtResource("2_xspoa")]
+transform = Transform3D(-0.347908, 0, -0.674255, 0, 0.886448, 0, 1.19199, 0, -0.196796, 1.05307, -1.15039, 0.376141)
+metadata/_edit_group_ = true
+
+[node name="Environments_testing2" parent="EnvironmentMeshes" instance=ExtResource("2_xspoa")]
+transform = Transform3D(-0.168347, -0.194727, 0.210382, 0.13653, -0.230974, 0.414473, 0.0477208, 0.734771, 0.295805, -2.23738, 0.107696, 1.85813)
+
+[node name="Environments_testing3" parent="EnvironmentMeshes" instance=ExtResource("2_xspoa")]
+transform = Transform3D(1.19679, -0.00155828, 0.106724, 0.0346504, 0.0373733, 0.0559163, -0.196012, -0.00290767, 0.661515, 0.743584, 2.70258, 3.52435)
+metadata/_edit_group_ = true
+
+[node name="EnvironmentScene" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="EnvironmentScene"]
+environment = SubResource("Environment_hj8bn")
+camera_attributes = SubResource("CameraAttributesPractical_vj3je")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="EnvironmentScene"]
+transform = Transform3D(0.481366, 0.421927, -0.768287, -0.15822, 0.903948, 0.397298, 0.862122, -0.0696873, 0.501886, 1.13195, 2.51756, 5.08679)
+light_color = Color(1, 0.929412, 0.470588, 1)
+light_energy = 0.3
+light_indirect_energy = 2.445
+light_volumetric_fog_energy = 3.061
+shadow_enabled = true
+shadow_normal_bias = 0.0
+
+[node name="FogVolume" type="FogVolume" parent="EnvironmentScene"]
+transform = Transform3D(3.48644, 0, 0, 0, 5.35968, -1.63072, 0, 4.00241, 2.18372, 0, 0.289998, 1.49295)
+size = Vector3(20, 1, 10.91)
+material = SubResource("FogMaterial_eya5y")
+
+[node name="FogVolume2" type="FogVolume" parent="EnvironmentScene"]
+transform = Transform3D(3.48644, 0, 0, 0, 6.65715, -0.266475, 0, 0.65403, 2.71236, 0, -0.876863, 7.59415)
+size = Vector3(20, 1, 10.91)
+material = SubResource("FogMaterial_y62rh")
+
+[node name="DemoCamera" parent="EnvironmentScene" instance=ExtResource("2_mdtrb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97542, 5.01396, 19.5403)
+
+[node name="Characters" type="Node3D" parent="."]
+
+[node name="Character" parent="Characters" instance=ExtResource("3_iq25e")]
+transform = Transform3D(0.87925, 0, -0.476361, 0, 1, 0, 0.476361, 0, 0.87925, -2.69168, 0.256733, 5.16645)
+
+[node name="TreeBirchRes" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08001, 0.0448055, 7.91602)
+material_override = SubResource("ShaderMaterial_sg2kp")
+mesh = ExtResource("4_velp5")
