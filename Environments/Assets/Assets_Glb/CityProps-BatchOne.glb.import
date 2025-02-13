@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b8xlmesj28nnp"
-path="res://.godot/imported/Trees.glb-23e26e228816aa5b21841e419d062028.scn"
+uid="uid://bypjfoimt2mrq"
+path="res://.godot/imported/CityProps-BatchOne.glb-e0c12f0d3f1edfc3272be39e2c19a812.scn"
 
 [deps]
 
-source_file="res://Environments/Assets-Glb/Trees.glb"
-dest_files=["res://.godot/imported/Trees.glb-23e26e228816aa5b21841e419d062028.scn"]
+source_file="res://Environments/Assets/Assets_Glb/CityProps-BatchOne.glb"
+dest_files=["res://.godot/imported/CityProps-BatchOne.glb-e0c12f0d3f1edfc3272be39e2c19a812.scn"]
 
 [params]
 

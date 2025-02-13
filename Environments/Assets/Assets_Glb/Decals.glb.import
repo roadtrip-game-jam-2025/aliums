@@ -1,0 +1,102 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://cmvcg26677d3w"
+path="res://.godot/imported/Decals.glb-66cb8c78d096602400b8ce2c71d6fbe8.scn"
+
+[deps]
+
+source_file="res://Environments/Assets/Assets_Glb/Decals.glb"
+dest_files=["res://.godot/imported/Decals.glb-66cb8c78d096602400b8ce2c71d6fbe8.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"meshes": {
+"Decals_Cylinder_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/Geo_Decals/CatDecal.res"
+},
+"Decals_Cylinder_004": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/Geo_Decals/OwlDecal.res"
+},
+"Decals_Cylinder_005": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/Geo_Decals/RectangleDecal.res"
+},
+"Decals_Cylinder_006": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/Geo_Decals/DecalOvalCutout.res"
+},
+"Decals_Cylinder_008": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/Geo_Decals/DecalOval.res"
+},
+"Decals_Cylinder_010": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/Geo_Decals/DecalMoon.res"
+},
+"Decals_Plane_009": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/Geo_Decals/CoolSDecal.res"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

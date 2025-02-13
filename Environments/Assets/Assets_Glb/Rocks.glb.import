@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://do1t0fe5elhpg"
-path="res://.godot/imported/Tree_Birch.glb-9d326ca23b4049369c8590409ee80848.scn"
+uid="uid://dlfpb66ves0j5"
+path="res://.godot/imported/Rocks.glb-061ee97253837321e966d65e57564470.scn"
 
 [deps]
 
-source_file="res://Environments/Assets-Glb/Tree_Birch.glb"
-dest_files=["res://.godot/imported/Tree_Birch.glb-9d326ca23b4049369c8590409ee80848.scn"]
+source_file="res://Environments/Assets/Assets_Glb/Rocks.glb"
+dest_files=["res://.godot/imported/Rocks.glb-061ee97253837321e966d65e57564470.scn"]
 
 [params]
 
