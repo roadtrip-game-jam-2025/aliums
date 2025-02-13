@@ -3,7 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://ogcapq2j4m4x" path="res://Environments/Assets/Assets_Res/City/VendingMachine.res" id="1_x61nb"]
 [ext_resource type="ArrayMesh" uid="uid://bcbaaj2pyevps" path="res://Environments/Assets/Assets_Res/Geo_Decals/DecalOvalCutout.res" id="2_orjt5"]
 [ext_resource type="ArrayMesh" uid="uid://bjww5yx6kkast" path="res://Environments/Assets/Assets_Res/Geo_Decals/DecalMoon.res" id="3_4qoja"]
-[ext_resource type="Material" uid="uid://kxnhwqprex52" path="res://Environments/Materials/Environment_White.tres" id="3_r20hr"]
+[ext_resource type="Material" uid="uid://kxnhwqprex52" path="res://Environments/Materials/Environment_LightYellow.tres" id="3_r20hr"]
 [ext_resource type="FontFile" uid="uid://dx7ttlditret0" path="res://utils/Fonts/Qaz-Regular.ttf" id="4_112of"]
 [ext_resource type="FontFile" uid="uid://dnidyqmgraa21" path="res://utils/Fonts/Jupiteroid-Italic.ttf" id="5_4oqmw"]
 

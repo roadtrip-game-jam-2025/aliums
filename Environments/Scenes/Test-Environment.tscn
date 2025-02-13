@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://c2xlx03kanghj"]
+[gd_scene load_steps=42 format=3 uid="uid://c2xlx03kanghj"]
 
 [ext_resource type="PackedScene" uid="uid://efqdcf4rgvjq" path="res://Environments/Test/Environments_testing.glb" id="1_esi7j"]
 [ext_resource type="PackedScene" uid="uid://d1le8vysmt41f" path="res://utils/debug_camera.tscn" id="2_v2tfx"]
@@ -32,6 +32,7 @@
 [ext_resource type="ArrayMesh" uid="uid://didb3nagc3ju8" path="res://Environments/Assets/Assets_Res/City/TrafficLight.res" id="29_ta0nn"]
 [ext_resource type="PackedScene" uid="uid://twfnrt70oh8r" path="res://Environments/Assets/Assets_Tscn/Dumpster_WithText.tscn" id="31_21k74"]
 [ext_resource type="PackedScene" uid="uid://c3nev5rm5488e" path="res://Environments/Assets/Assets_Tscn/TelephonePole_WithSigns.tscn" id="32_k7v5u"]
+[ext_resource type="PackedScene" uid="uid://bismx7nkcf5uo" path="res://Environments/Assets/Assets_Tscn/VendingMachine.tscn" id="33_li0fb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hps0x"]
 
@@ -274,11 +275,8 @@ mesh = ExtResource("28_tlu7g")
 [node name="Dumpster_WithText" parent="." instance=ExtResource("31_21k74")]
 transform = Transform3D(-0.372518, 0, 0.928025, 0, 1, 0, -0.928025, 0, -0.372518, -10.5793, 0, 10.289)
 
-[node name="Node3D" parent="." instance=ExtResource("32_k7v5u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63567, 0.309445, 19.4206)
+[node name="TelephonePole2" parent="." instance=ExtResource("32_k7v5u")]
+transform = Transform3D(0.312932, 0, 0.949776, 0, 1, 0, -0.949776, 0, 0.312932, -6.53806, -0.357815, 12.8277)
 
-[node name="Node3D2" parent="." instance=ExtResource("32_k7v5u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.70891, 0.447256, 17.5487)
-
-[node name="Node3D3" parent="." instance=ExtResource("32_k7v5u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63567, 0.309445, 26.2616)
+[node name="VendingMachine" parent="." instance=ExtResource("33_li0fb")]
+transform = Transform3D(-0.430243, 0, 0.902713, 0, 1, 0, -0.902713, 0, -0.430243, -9.56663, 0.125135, 14.0441)
