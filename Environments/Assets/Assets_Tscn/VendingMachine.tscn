@@ -1,28 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://bismx7nkcf5uo"]
+[gd_scene load_steps=7 format=3 uid="uid://bismx7nkcf5uo"]
 
-[ext_resource type="ArrayMesh" uid="uid://ogcapq2j4m4x" path="res://Environments/Assets/Assets_Res/City/VendingMachine.res" id="1_4jvh0"]
-[ext_resource type="ArrayMesh" uid="uid://bcbaaj2pyevps" path="res://Environments/Assets/Assets_Res/Geo_Decals/DecalOvalCutout.res" id="3_l4kkq"]
-[ext_resource type="ArrayMesh" uid="uid://bjww5yx6kkast" path="res://Environments/Assets/Assets_Res/Geo_Decals/DecalMoon.res" id="4_t0cot"]
-[ext_resource type="FontFile" uid="uid://dx7ttlditret0" path="res://utils/Fonts/Qaz-Regular.ttf" id="4_tjmtu"]
-[ext_resource type="FontFile" uid="uid://dnidyqmgraa21" path="res://utils/Fonts/Jupiteroid-Italic.ttf" id="5_uk3rs"]
+[ext_resource type="ArrayMesh" uid="uid://ogcapq2j4m4x" path="res://Environments/Assets/Assets_Res/City/VendingMachine.res" id="1_x61nb"]
+[ext_resource type="ArrayMesh" uid="uid://bcbaaj2pyevps" path="res://Environments/Assets/Assets_Res/Geo_Decals/DecalOvalCutout.res" id="2_orjt5"]
+[ext_resource type="ArrayMesh" uid="uid://bjww5yx6kkast" path="res://Environments/Assets/Assets_Res/Geo_Decals/DecalMoon.res" id="3_4qoja"]
+[ext_resource type="Material" uid="uid://kxnhwqprex52" path="res://Environments/Materials/Environment_White.tres" id="3_r20hr"]
+[ext_resource type="FontFile" uid="uid://dx7ttlditret0" path="res://utils/Fonts/Qaz-Regular.ttf" id="4_112of"]
+[ext_resource type="FontFile" uid="uid://dnidyqmgraa21" path="res://utils/Fonts/Jupiteroid-Italic.ttf" id="5_4oqmw"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="VendingMachine" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_4jvh0")
+mesh = ExtResource("1_x61nb")
 
 [node name="Decals" type="Node3D" parent="."]
 
 [node name="DecalOvalCutout" type="MeshInstance3D" parent="Decals"]
 transform = Transform3D(0.00305, -0.733878, 0.0470245, -0.273712, 0.0425133, 0.681228, -0.682546, -0.0203279, -0.272974, -1.36288, 4.64173, -0.779513)
-mesh = ExtResource("3_l4kkq")
+mesh = ExtResource("2_orjt5")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("3_r20hr")
 metadata/_edit_group_ = true
 
 [node name="DecalMoon" type="MeshInstance3D" parent="Decals"]
 transform = Transform3D(0.00478383, -0.813704, 0.0269836, 0.113061, 0.0273866, 0.805812, -0.806263, -0.000987601, 0.113158, -1.34055, 3.61201, -0.398197)
-mesh = ExtResource("4_t0cot")
+mesh = ExtResource("3_4qoja")
 skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("3_r20hr")
 metadata/_edit_group_ = true
 
 [node name="Text" type="Node3D" parent="."]
@@ -32,7 +35,7 @@ transform = Transform3D(0.000665683, 0.0467443, -1.19645, 0.466242, 1.10201, 0.0
 modulate = Color(0.818803, 0.873296, 0.878859, 1)
 outline_modulate = Color(0.162, 0.3456, 0.81, 0.0627451)
 text = "drink"
-font = ExtResource("4_tjmtu")
+font = ExtResource("4_112of")
 font_size = 48
 outline_size = 0
 
@@ -42,7 +45,7 @@ modulate = Color(0.818803, 0.873296, 0.878859, 1)
 outline_modulate = Color(0.819608, 0.87451, 0.878431, 1)
 text = "Moon-
 Drop"
-font = ExtResource("5_uk3rs")
+font = ExtResource("5_4oqmw")
 font_size = 149
 outline_size = 15
 horizontal_alignment = 0
