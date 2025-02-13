@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://bismx7nkcf5uo"]
+
+[ext_resource type="ArrayMesh" uid="uid://ogcapq2j4m4x" path="res://Environments/Assets/Assets_Res/City/VendingMachine.res" id="1_4jvh0"]
+[ext_resource type="ArrayMesh" uid="uid://bcbaaj2pyevps" path="res://Environments/Assets/Assets_Res/Geo_Decals/DecalOvalCutout.res" id="3_l4kkq"]
+[ext_resource type="ArrayMesh" uid="uid://bjww5yx6kkast" path="res://Environments/Assets/Assets_Res/Geo_Decals/DecalMoon.res" id="4_t0cot"]
+[ext_resource type="FontFile" uid="uid://dx7ttlditret0" path="res://utils/Fonts/Qaz-Regular.ttf" id="4_tjmtu"]
+[ext_resource type="FontFile" uid="uid://dnidyqmgraa21" path="res://utils/Fonts/Jupiteroid-Italic.ttf" id="5_uk3rs"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="VendingMachine" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_4jvh0")
+
+[node name="Decals" type="Node3D" parent="."]
+
+[node name="DecalOvalCutout" type="MeshInstance3D" parent="Decals"]
+transform = Transform3D(0.00305, -0.733878, 0.0470245, -0.273712, 0.0425133, 0.681228, -0.682546, -0.0203279, -0.272974, -1.36288, 4.64173, -0.779513)
+mesh = ExtResource("3_l4kkq")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="DecalMoon" type="MeshInstance3D" parent="Decals"]
+transform = Transform3D(0.00478383, -0.813704, 0.0269836, 0.113061, 0.0273866, 0.805812, -0.806263, -0.000987601, 0.113158, -1.34055, 3.61201, -0.398197)
+mesh = ExtResource("4_t0cot")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="Text" type="Node3D" parent="."]
+
+[node name="drink" type="Label3D" parent="Text"]
+transform = Transform3D(0.000665683, 0.0467443, -1.19645, 0.466242, 1.10201, 0.0433139, 1.10286, -0.46591, -0.0175891, -1.35508, 4.70139, -0.77432)
+modulate = Color(0.818803, 0.873296, 0.878859, 1)
+outline_modulate = Color(0.162, 0.3456, 0.81, 0.0627451)
+text = "drink"
+font = ExtResource("4_tjmtu")
+font_size = 48
+outline_size = 0
+
+[node name="moon" type="Label3D" parent="Text"]
+transform = Transform3D(0.000437669, 0.0307333, -0.786637, 0.241879, 0.748581, 0.029381, 0.749157, -0.241711, -0.00902664, -1.35632, 3.62026, -0.937218)
+modulate = Color(0.818803, 0.873296, 0.878859, 1)
+outline_modulate = Color(0.819608, 0.87451, 0.878431, 1)
+text = "Moon-
+Drop"
+font = ExtResource("5_uk3rs")
+font_size = 149
+outline_size = 15
+horizontal_alignment = 0
+line_spacing = -43.28
