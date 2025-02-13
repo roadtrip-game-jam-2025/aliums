@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cl112n4asglkf"
-path="res://.godot/imported/ShoesB_ChelseaBoots.glb-a2a7e67079d68b7b0485d93048ae3a9e.scn"
+path="res://.godot/imported/ShoesB_ChelseaBoots.glb-8a1087af72ffdb7ffecc94020f5dd4df.scn"
 
 [deps]
 
-source_file="res://Characters/CharacterPieces/Shoes/ShoesB_ChelseaBoots.glb"
-dest_files=["res://.godot/imported/ShoesB_ChelseaBoots.glb-a2a7e67079d68b7b0485d93048ae3a9e.scn"]
+source_file="res://Characters/CharacterPieces/Shoes/GLBs/ShoesB_ChelseaBoots.glb"
+dest_files=["res://.godot/imported/ShoesB_ChelseaBoots.glb-8a1087af72ffdb7ffecc94020f5dd4df.scn"]
 
 [params]
 
