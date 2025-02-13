@@ -18,8 +18,8 @@ func _ready() -> void:
   altitude_noise.seed = randi_range(0,2048)
 
 func generate_continent() -> void:
-  for m in map_width:
-    for n in map_width:
+  for m in range(map_width):
+    for n in range(map_width):
       var x = n - map_width / 2.0
       var y = m - map_width / 2.0
       var value = altitude_value(x, y)
@@ -46,8 +46,8 @@ func generate_map() -> void:
     for pos in continent.keys():
       tiles[pos] = TileType.LAND
     if continent.keys().size() > minimum_land_ratio * map_width * map_width:
-      generated_map = continent
-      break
+      generated_map = tiles
+      return
   assert(generated_map.keys().size() > 0, "Failed to generate map")
 
 func largest_connected_land_component() -> Dictionary:
