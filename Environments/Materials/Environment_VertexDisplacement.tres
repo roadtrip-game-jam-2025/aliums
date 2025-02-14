@@ -1,7 +1,7 @@
 [gd_resource type="VisualShader" load_steps=23 format=3 uid="uid://dts5n6pd614qj"]
 
-[ext_resource type="Texture2D" uid="uid://ddecimyb4u3ub" path="res://Environments/Textures/NoiseTexture.png" id="1_nilxu"]
-[ext_resource type="Texture2D" uid="uid://bcas22va6rpkb" path="res://Environments/Textures/BlendTexture.png" id="2_en3nt"]
+[ext_resource type="Texture2D" uid="uid://ddecimyb4u3ub" path="res://Environments/Textures/NoiseTexture.png" id="1_ubwfg"]
+[ext_resource type="Texture2D" uid="uid://bcas22va6rpkb" path="res://Environments/Textures/BlendTexture.png" id="2_u1ukn"]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_nwffj"]
 output_port_for_preview = 0
@@ -29,7 +29,7 @@ operator = 2
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_08yvd"]
 source = 5
-texture = ExtResource("1_nilxu")
+texture = ExtResource("1_ubwfg")
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_vvuse"]
 input_name = "vertex"
@@ -40,7 +40,7 @@ op_type = 3
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_bwfst"]
 source = 5
-texture = ExtResource("2_en3nt")
+texture = ExtResource("2_u1ukn")
 
 [sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_6ncj0"]
 parameter_name = "Noise"
@@ -176,7 +176,6 @@ void fragment() {
 
 }
 "
-graph_offset = Vector2(-355.896, -39.1525)
 nodes/vertex/0/position = Vector2(1600, 140)
 nodes/vertex/4/node = SubResource("VisualShaderNodeFloatOp_gn73i")
 nodes/vertex/4/position = Vector2(220, 180)
@@ -218,5 +217,5 @@ nodes/vertex/30/node = SubResource("VisualShaderNodeTexture2DParameter_x8wxp")
 nodes/vertex/30/position = Vector2(-100, 760)
 nodes/vertex/connections = PackedInt32Array(6, 0, 4, 1, 7, 0, 11, 0, 10, 0, 11, 1, 11, 0, 13, 0, 14, 0, 16, 1, 12, 0, 16, 0, 16, 0, 13, 1, 13, 0, 17, 0, 17, 0, 4, 0, 9, 0, 21, 0, 19, 0, 21, 1, 25, 0, 21, 2, 26, 0, 17, 2, 27, 0, 29, 0, 21, 0, 29, 2, 29, 0, 0, 0, 9, 0, 29, 1, 30, 0, 25, 2, 8, 0, 9, 0, 4, 0, 9, 1)
 nodes/fragment/2/node = SubResource("VisualShaderNodeInput_nwffj")
-nodes/fragment/2/position = Vector2(-500, 120)
+nodes/fragment/2/position = Vector2(-380, 60)
 nodes/fragment/connections = PackedInt32Array(2, 0, 0, 0)

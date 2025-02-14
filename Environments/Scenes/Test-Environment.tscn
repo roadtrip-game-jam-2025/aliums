@@ -1,9 +1,9 @@
-[gd_scene load_steps=42 format=3 uid="uid://c2xlx03kanghj"]
+[gd_scene load_steps=48 format=3 uid="uid://c2xlx03kanghj"]
 
 [ext_resource type="PackedScene" uid="uid://efqdcf4rgvjq" path="res://Environments/Test/Environments_testing.glb" id="1_esi7j"]
 [ext_resource type="PackedScene" uid="uid://d1le8vysmt41f" path="res://utils/debug_camera.tscn" id="2_v2tfx"]
 [ext_resource type="PackedScene" uid="uid://wk134ykl3tsb" path="res://Characters/Character.tscn" id="3_c2p6k"]
-[ext_resource type="Shader" uid="uid://dts5n6pd614qj" path="res://Environments/Materials/Environment_Vertex.tres" id="4_n82ea"]
+[ext_resource type="Shader" uid="uid://dts5n6pd614qj" path="res://Environments/Materials/Environment_VertexDisplacement.tres" id="4_n82ea"]
 [ext_resource type="Texture2D" uid="uid://ddecimyb4u3ub" path="res://Environments/Textures/NoiseTexture.png" id="5_imovl"]
 [ext_resource type="Texture2D" uid="uid://bcas22va6rpkb" path="res://Environments/Textures/BlendTexture.png" id="6_jtpw0"]
 [ext_resource type="ArrayMesh" uid="uid://d2g3838aqisli" path="res://Environments/Assets/Assets_Res/Natural/Plants/Tree_Birch.res" id="7_xnfpj"]
@@ -33,6 +33,9 @@
 [ext_resource type="PackedScene" uid="uid://twfnrt70oh8r" path="res://Environments/Assets/Assets_Tscn/Dumpster_WithText.tscn" id="31_21k74"]
 [ext_resource type="PackedScene" uid="uid://c3nev5rm5488e" path="res://Environments/Assets/Assets_Tscn/TelephonePole_WithSigns.tscn" id="32_k7v5u"]
 [ext_resource type="PackedScene" uid="uid://bismx7nkcf5uo" path="res://Environments/Assets/Assets_Tscn/VendingMachine.tscn" id="33_li0fb"]
+[ext_resource type="PackedScene" uid="uid://cfd6nc00lbdy7" path="res://Environments/Assets/Assets_Tscn/VendingMachine_Alt.tscn" id="34_mh7dx"]
+[ext_resource type="ArrayMesh" uid="uid://r17wru8x53xl" path="res://Environments/Assets/Assets_Res/Natural/Plants/Flower_Alium.res" id="35_xvalv"]
+[ext_resource type="Shader" uid="uid://ckfbva2548jxb" path="res://Environments/Materials/RandomColorShift.tres" id="36_h7ald"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hps0x"]
 
@@ -95,6 +98,30 @@ shader_parameter/TimeScale = 0.585
 shader_parameter/Intensity = 0.94
 shader_parameter/Noise = ExtResource("5_imovl")
 shader_parameter/UVMask = ExtResource("6_jtpw0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_da8ng"]
+render_priority = 0
+shader = ExtResource("36_h7ald")
+shader_parameter/ColorTintA = Color(0.167021, 0.466853, 0.791539, 1)
+shader_parameter/ColorTintB = Color(0.602871, 0.349988, 0.633187, 1)
+shader_parameter/ColorTintC = Color(0.708291, 0.338928, 0.226186, 1)
+shader_parameter/EmissionAmount = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_57lpt"]
+render_priority = 0
+shader = ExtResource("36_h7ald")
+shader_parameter/ColorTintA = Color(0.167021, 0.466853, 0.791539, 1)
+shader_parameter/ColorTintB = Color(0.602871, 0.349988, 0.633187, 1)
+shader_parameter/ColorTintC = Color(0.708291, 0.338928, 0.226186, 1)
+shader_parameter/EmissionAmount = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w24l4"]
+render_priority = 0
+shader = ExtResource("36_h7ald")
+shader_parameter/ColorTintA = Color(0.167021, 0.466853, 0.791539, 1)
+shader_parameter/ColorTintB = Color(0.602871, 0.349988, 0.633187, 1)
+shader_parameter/ColorTintC = Color(0.708291, 0.338928, 0.226186, 1)
+shader_parameter/EmissionAmount = null
 
 [node name="Test-environment" type="Node3D"]
 
@@ -280,3 +307,46 @@ transform = Transform3D(0.312932, 0, 0.949776, 0, 1, 0, -0.949776, 0, 0.312932, 
 
 [node name="VendingMachine" parent="." instance=ExtResource("33_li0fb")]
 transform = Transform3D(-0.430243, 0, 0.902713, 0, 1, 0, -0.902713, 0, -0.430243, -9.56663, 0.125135, 14.0441)
+
+[node name="SwordFern2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63131, 1.19209e-07, 11.9796)
+mesh = ExtResource("11_6iera")
+
+[node name="FlowerAlium" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44758, 0.640506, 6.38913)
+mesh = ExtResource("35_xvalv")
+
+[node name="FlowerAlium2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.390072, 0, -0.920784, 0, 1, 0, 0.920784, 0, 0.390072, -0.0575359, 0, 10.4176)
+mesh = ExtResource("35_xvalv")
+
+[node name="FlowerAlium3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.44077, 0, -0.89762, 0, 1, 0, 0.89762, 0, 0.44077, 2.45664, 0, 11.1564)
+mesh = ExtResource("35_xvalv")
+
+[node name="TreeBirch2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.366, 0, 12.4417)
+mesh = ExtResource("7_xnfpj")
+
+[node name="Dreamverse" type="Node3D" parent="."]
+
+[node name="Node3D" parent="Dreamverse" instance=ExtResource("34_mh7dx")]
+transform = Transform3D(-0.454613, 0, 0.890689, 0, 1, 0, -0.890689, 0, -0.454613, -18.5217, -0.0140455, 21.0155)
+
+[node name="FlowerAlium4" type="MeshInstance3D" parent="Dreamverse"]
+transform = Transform3D(0.963579, 0, -0.267423, 0, 1, 0, 0.267423, 0, 0.963579, -15.1732, -0.32401, 17.027)
+mesh = ExtResource("35_xvalv")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_da8ng")
+
+[node name="StopSign2" type="MeshInstance3D" parent="Dreamverse"]
+transform = Transform3D(-0.119063, 0, 0.992886, 0, 1, 0, -0.992886, 0, -0.119063, -16.9056, -0.32401, 17.1182)
+mesh = ExtResource("25_ua4rd")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_57lpt")
+
+[node name="TreeBirch3" type="MeshInstance3D" parent="Dreamverse"]
+transform = Transform3D(-0.236482, 0, 0.971636, 0, 1, 0, -0.971636, 0, -0.236482, -13.9123, -0.994537, 15.9149)
+mesh = ExtResource("7_xnfpj")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_w24l4")
