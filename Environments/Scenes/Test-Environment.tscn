@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://c2xlx03kanghj"]
+[gd_scene load_steps=49 format=3 uid="uid://c2xlx03kanghj"]
 
 [ext_resource type="PackedScene" uid="uid://efqdcf4rgvjq" path="res://Environments/Test/Environments_testing.glb" id="1_esi7j"]
 [ext_resource type="PackedScene" uid="uid://d1le8vysmt41f" path="res://utils/debug_camera.tscn" id="2_v2tfx"]
@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://cfd6nc00lbdy7" path="res://Environments/Assets/Assets_Tscn/VendingMachine_Alt.tscn" id="34_mh7dx"]
 [ext_resource type="ArrayMesh" uid="uid://r17wru8x53xl" path="res://Environments/Assets/Assets_Res/Natural/Plants/Flower_Alium.res" id="35_xvalv"]
 [ext_resource type="Shader" uid="uid://ckfbva2548jxb" path="res://Environments/Materials/RandomColorShift.tres" id="36_h7ald"]
+[ext_resource type="PackedScene" uid="uid://bs1mvquncyjh3" path="res://Environments/Assets/Assets_Glb/Alium.glb" id="37_4mgsf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hps0x"]
 
@@ -331,22 +332,25 @@ mesh = ExtResource("7_xnfpj")
 [node name="Dreamverse" type="Node3D" parent="."]
 
 [node name="Node3D" parent="Dreamverse" instance=ExtResource("34_mh7dx")]
-transform = Transform3D(-0.454613, 0, 0.890689, 0, 1, 0, -0.890689, 0, -0.454613, -18.5217, -0.0140455, 21.0155)
+transform = Transform3D(-0.408713, 0, 0.912663, 0, 1, 0, -0.912663, 0, -0.408713, 2.81216, 0.199286, 23.0134)
 
 [node name="FlowerAlium4" type="MeshInstance3D" parent="Dreamverse"]
-transform = Transform3D(0.963579, 0, -0.267423, 0, 1, 0, 0.267423, 0, 0.963579, -15.1732, -0.32401, 17.027)
+transform = Transform3D(0.948727, 0, -0.316096, 0, 1, 0, 0.316096, 0, 0.948727, 6.35922, -0.110678, 19.2004)
 mesh = ExtResource("35_xvalv")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("ShaderMaterial_da8ng")
 
 [node name="StopSign2" type="MeshInstance3D" parent="Dreamverse"]
-transform = Transform3D(-0.119063, 0, 0.992886, 0, 1, 0, -0.992886, 0, -0.119063, -16.9056, -0.32401, 17.1182)
+transform = Transform3D(-0.0683988, 0, 0.997658, 0, 1, 0, -0.997658, 0, -0.0683988, 4.62443, -0.110678, 19.2033)
 mesh = ExtResource("25_ua4rd")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("ShaderMaterial_57lpt")
 
 [node name="TreeBirch3" type="MeshInstance3D" parent="Dreamverse"]
-transform = Transform3D(-0.236482, 0, 0.971636, 0, 1, 0, -0.971636, 0, -0.236482, -13.9123, -0.994537, 15.9149)
+transform = Transform3D(-0.186747, 0, 0.982408, 0, 1, 0, -0.982408, 0, -0.186747, 7.67506, -0.781205, 18.1539)
 mesh = ExtResource("7_xnfpj")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("ShaderMaterial_w24l4")
+
+[node name="Alium2" parent="." instance=ExtResource("37_4mgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6594, 0, -9.40684)
