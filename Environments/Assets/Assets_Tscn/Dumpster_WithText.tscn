@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://twfnrt70oh8r"]
+
+[ext_resource type="ArrayMesh" uid="uid://dj5b1xg7rgurd" path="res://Environments/Assets/Assets_Res/City/DumpsterBase.res" id="1_wd1ce"]
+[ext_resource type="FontFile" uid="uid://coc7qlf5evwqd" path="res://utils/Fonts/ZeroCool.ttf" id="2_on6n8"]
+[ext_resource type="FontFile" uid="uid://y4iimlban8pl" path="res://utils/Fonts/soh.ttf" id="3_lfxr4"]
+[ext_resource type="FontFile" uid="uid://ctobnweam2jhk" path="res://utils/Fonts/QuinqueFive.ttf" id="4_jqacj"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DumpsterBase" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_wd1ce")
+
+[node name="TextContainer" type="Node3D" parent="DumpsterBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.28706, 1.46366, 0)
+
+[node name="sriracha" type="Label3D" parent="DumpsterBase/TextContainer"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0.175109, 0.984549, -7.65426e-09, 0.984549, -0.175109, -4.3036e-08, 0.241033, -0.201519, 0)
+modulate = Color(0.625711, 0, 0.0959898, 0.819608)
+outline_modulate = Color(0.162, 0.3456, 0.81, 0.0627451)
+text = "SRIRACHA"
+font = ExtResource("2_on6n8")
+font_size = 149
+outline_size = 85
+
+[node name="never lonely" type="Label3D" parent="DumpsterBase/TextContainer"]
+transform = Transform3D(-5.72338e-08, -2.23264e-16, -1.30936, 0.0873007, 1.30644, -3.81603e-09, 1.30644, -0.0873007, -5.71065e-08, 0.247152, 1.28445, -1.21075)
+modulate = Color(0.85, 0.46665, 0.153, 0.313726)
+outline_modulate = Color(0.162, 0.3456, 0.81, 0.0627451)
+text = "never lonely"
+font = ExtResource("3_lfxr4")
+font_size = 64
+outline_size = 0
+
+[node name="soft animal" type="Label3D" parent="DumpsterBase/TextContainer"]
+transform = Transform3D(-0.00553102, -0.0352969, -0.79496, -0.0850891, 0.790447, -0.0345046, 0.791181, 0.0847634, -0.00926829, 0.247152, 0.780037, 0.320656)
+modulate = Color(0.28548, 0.2684, 0.61, 0.878431)
+outline_modulate = Color(0.905957, 0.00090351, 0.94296, 0.0627451)
+text = "soft animal"
+font = ExtResource("4_jqacj")
+font_size = 64
+outline_size = 70
+
+[node name="roxiecat" type="Label3D" parent="DumpsterBase/TextContainer"]
+transform = Transform3D(-1.07776, 0.185716, 9.42205e-08, 0.185716, 1.07776, -1.62358e-08, -9.56092e-08, 0, -1.09364, 1.83601, 0.981094, -3.08997)
+modulate = Color(0.590083, 0.485, 0.97, 0.054902)
+outline_modulate = Color(0.162, 0.3456, 0.81, 0.0627451)
+text = "roxiecat :3"
+font = ExtResource("3_lfxr4")
+font_size = 64
+outline_size = 0

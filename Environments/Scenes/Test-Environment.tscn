@@ -1,35 +1,42 @@
-[gd_scene load_steps=39 format=3 uid="uid://c2xlx03kanghj"]
+[gd_scene load_steps=49 format=3 uid="uid://c2xlx03kanghj"]
 
 [ext_resource type="PackedScene" uid="uid://efqdcf4rgvjq" path="res://Environments/Test/Environments_testing.glb" id="1_esi7j"]
 [ext_resource type="PackedScene" uid="uid://d1le8vysmt41f" path="res://utils/debug_camera.tscn" id="2_v2tfx"]
 [ext_resource type="PackedScene" uid="uid://wk134ykl3tsb" path="res://Characters/Character.tscn" id="3_c2p6k"]
-[ext_resource type="Shader" uid="uid://dts5n6pd614qj" path="res://Environments/Materials/Environment_Vertex.tres" id="4_n82ea"]
+[ext_resource type="Shader" uid="uid://dts5n6pd614qj" path="res://Environments/Materials/Environment_VertexDisplacement.tres" id="4_n82ea"]
 [ext_resource type="Texture2D" uid="uid://ddecimyb4u3ub" path="res://Environments/Textures/NoiseTexture.png" id="5_imovl"]
 [ext_resource type="Texture2D" uid="uid://bcas22va6rpkb" path="res://Environments/Textures/BlendTexture.png" id="6_jtpw0"]
-[ext_resource type="ArrayMesh" uid="uid://d2g3838aqisli" path="res://Environments/Assets_Res/Natural/Plants/Tree_Birch.res" id="7_xnfpj"]
-[ext_resource type="ArrayMesh" uid="uid://clgcpggtcqye1" path="res://Environments/Assets_Res/Natural/Plants/GrassChunk_Big.res" id="8_3s3i8"]
-[ext_resource type="ArrayMesh" uid="uid://b6pr4lxdbeb88" path="res://Environments/Assets_Res/Natural/Plants/Tree_Manzanita.res" id="9_v03nn"]
-[ext_resource type="ArrayMesh" uid="uid://brhtbyiu4msoi" path="res://Environments/Assets_Res/Natural/Plants/Tree_DouglasFir.res" id="10_408e2"]
-[ext_resource type="ArrayMesh" uid="uid://bgl5hbl0a88nt" path="res://Environments/Assets_Res/Natural/Plants/SwordFern.res" id="11_6iera"]
-[ext_resource type="ArrayMesh" uid="uid://clu5d28rbs3af" path="res://Environments/Assets_Res/Natural/Plants/Stump.res" id="12_bfknj"]
-[ext_resource type="ArrayMesh" uid="uid://bup6yjqaieha7" path="res://Environments/Assets_Res/Natural/Plants/GrassChunk_Small.res" id="13_xqvj3"]
-[ext_resource type="ArrayMesh" uid="uid://3v7wq25elohx" path="res://Environments/Assets_Res/Natural/Plants/Tree_SmallCedar.res" id="14_lw2l4"]
-[ext_resource type="ArrayMesh" uid="uid://cxqy6jm20v66o" path="res://Environments/Assets_Res/Natural/Rocks/RockA.res" id="15_k6g7e"]
-[ext_resource type="ArrayMesh" uid="uid://d17fjmv3jmsnc" path="res://Environments/Assets_Res/Natural/Rocks/RockB.res" id="16_3ol3e"]
-[ext_resource type="ArrayMesh" uid="uid://cdyg6cqrh4ieg" path="res://Environments/Assets_Res/Natural/Rocks/RockC.res" id="17_18ihh"]
-[ext_resource type="ArrayMesh" uid="uid://347nvuxfuwlm" path="res://Environments/Assets_Res/Natural/Rocks/RockD.res" id="18_ovyjt"]
-[ext_resource type="ArrayMesh" uid="uid://30l5sob5n6iu" path="res://Environments/Assets_Res/Natural/Rocks/SmallRockB.res" id="19_i88pi"]
-[ext_resource type="ArrayMesh" uid="uid://b28r5xsyiupfj" path="res://Environments/Assets_Res/Natural/Rocks/SmallRockD.res" id="20_gk075"]
-[ext_resource type="ArrayMesh" uid="uid://dvmpbp8a1jdlh" path="res://Environments/Assets_Res/Natural/Rocks/SmallRockC.res" id="21_qlt4l"]
-[ext_resource type="ArrayMesh" uid="uid://dj5b1xg7rgurd" path="res://Environments/Assets_Res/City/DumpsterBase.res" id="22_osmqy"]
-[ext_resource type="ArrayMesh" uid="uid://bxxps25mspeof" path="res://Environments/Assets_Res/City/DumpsterLids.res" id="23_v7chx"]
-[ext_resource type="ArrayMesh" uid="uid://enbrct5pcsxh" path="res://Environments/Assets_Res/City/Mailbox.res" id="24_elak4"]
-[ext_resource type="ArrayMesh" uid="uid://rwpsenytayf0" path="res://Environments/Assets_Res/City/StopSign.res" id="25_ua4rd"]
-[ext_resource type="ArrayMesh" uid="uid://q1025jwrvkuk" path="res://Environments/Assets_Res/City/TelephonePole.res" id="26_wxyq2"]
-[ext_resource type="ArrayMesh" uid="uid://cuyxq3nkcand" path="res://Environments/Assets_Res/City/Tire.res" id="27_udens"]
+[ext_resource type="ArrayMesh" uid="uid://d2g3838aqisli" path="res://Environments/Assets/Assets_Res/Natural/Plants/Tree_Birch.res" id="7_xnfpj"]
+[ext_resource type="ArrayMesh" uid="uid://clgcpggtcqye1" path="res://Environments/Assets/Assets_Res/Natural/Plants/GrassChunk_Big.res" id="8_3s3i8"]
+[ext_resource type="ArrayMesh" uid="uid://b6pr4lxdbeb88" path="res://Environments/Assets/Assets_Res/Natural/Plants/Tree_Manzanita.res" id="9_v03nn"]
+[ext_resource type="ArrayMesh" uid="uid://brhtbyiu4msoi" path="res://Environments/Assets/Assets_Res/Natural/Plants/Tree_DouglasFir.res" id="10_408e2"]
+[ext_resource type="ArrayMesh" uid="uid://bgl5hbl0a88nt" path="res://Environments/Assets/Assets_Res/Natural/Plants/SwordFern.res" id="11_6iera"]
+[ext_resource type="ArrayMesh" uid="uid://clu5d28rbs3af" path="res://Environments/Assets/Assets_Res/Natural/Plants/Stump.res" id="12_bfknj"]
+[ext_resource type="ArrayMesh" uid="uid://bup6yjqaieha7" path="res://Environments/Assets/Assets_Res/Natural/Plants/GrassChunk_Small.res" id="13_xqvj3"]
+[ext_resource type="ArrayMesh" uid="uid://3v7wq25elohx" path="res://Environments/Assets/Assets_Res/Natural/Plants/Tree_SmallCedar.res" id="14_lw2l4"]
+[ext_resource type="ArrayMesh" uid="uid://cxqy6jm20v66o" path="res://Environments/Assets/Assets_Res/Natural/Rocks/RockA.res" id="15_k6g7e"]
+[ext_resource type="ArrayMesh" uid="uid://d17fjmv3jmsnc" path="res://Environments/Assets/Assets_Res/Natural/Rocks/RockB.res" id="16_3ol3e"]
+[ext_resource type="ArrayMesh" uid="uid://cdyg6cqrh4ieg" path="res://Environments/Assets/Assets_Res/Natural/Rocks/RockC.res" id="17_18ihh"]
+[ext_resource type="ArrayMesh" uid="uid://347nvuxfuwlm" path="res://Environments/Assets/Assets_Res/Natural/Rocks/RockD.res" id="18_ovyjt"]
+[ext_resource type="ArrayMesh" uid="uid://30l5sob5n6iu" path="res://Environments/Assets/Assets_Res/Natural/Rocks/SmallRockB.res" id="19_i88pi"]
+[ext_resource type="ArrayMesh" uid="uid://b28r5xsyiupfj" path="res://Environments/Assets/Assets_Res/Natural/Rocks/SmallRockD.res" id="20_gk075"]
+[ext_resource type="ArrayMesh" uid="uid://dvmpbp8a1jdlh" path="res://Environments/Assets/Assets_Res/Natural/Rocks/SmallRockC.res" id="21_qlt4l"]
+[ext_resource type="ArrayMesh" uid="uid://dj5b1xg7rgurd" path="res://Environments/Assets/Assets_Res/City/DumpsterBase.res" id="22_osmqy"]
+[ext_resource type="ArrayMesh" uid="uid://bxxps25mspeof" path="res://Environments/Assets/Assets_Res/City/DumpsterLids.res" id="23_v7chx"]
+[ext_resource type="ArrayMesh" uid="uid://enbrct5pcsxh" path="res://Environments/Assets/Assets_Res/City/Mailbox.res" id="24_elak4"]
+[ext_resource type="ArrayMesh" uid="uid://rwpsenytayf0" path="res://Environments/Assets/Assets_Res/City/StopSign.res" id="25_ua4rd"]
+[ext_resource type="ArrayMesh" uid="uid://q1025jwrvkuk" path="res://Environments/Assets/Assets_Res/City/TelephonePole.res" id="26_wxyq2"]
+[ext_resource type="ArrayMesh" uid="uid://cuyxq3nkcand" path="res://Environments/Assets/Assets_Res/City/Tire.res" id="27_udens"]
 [ext_resource type="Material" uid="uid://bgthwhdvvamnc" path="res://Environments/Materials/Environment.tres" id="28_kwpff"]
-[ext_resource type="ArrayMesh" uid="uid://cmabyg0kyslht" path="res://Environments/Assets_Res/City/TrafficCone.res" id="28_tlu7g"]
-[ext_resource type="ArrayMesh" uid="uid://didb3nagc3ju8" path="res://Environments/Assets_Res/City/TrafficLight.res" id="29_ta0nn"]
+[ext_resource type="ArrayMesh" uid="uid://cmabyg0kyslht" path="res://Environments/Assets/Assets_Res/City/TrafficCone.res" id="28_tlu7g"]
+[ext_resource type="ArrayMesh" uid="uid://didb3nagc3ju8" path="res://Environments/Assets/Assets_Res/City/TrafficLight.res" id="29_ta0nn"]
+[ext_resource type="PackedScene" uid="uid://twfnrt70oh8r" path="res://Environments/Assets/Assets_Tscn/Dumpster_WithText.tscn" id="31_21k74"]
+[ext_resource type="PackedScene" uid="uid://c3nev5rm5488e" path="res://Environments/Assets/Assets_Tscn/TelephonePole_WithSigns.tscn" id="32_k7v5u"]
+[ext_resource type="PackedScene" uid="uid://bismx7nkcf5uo" path="res://Environments/Assets/Assets_Tscn/VendingMachine.tscn" id="33_li0fb"]
+[ext_resource type="PackedScene" uid="uid://cfd6nc00lbdy7" path="res://Environments/Assets/Assets_Tscn/VendingMachine_Alt.tscn" id="34_mh7dx"]
+[ext_resource type="ArrayMesh" uid="uid://r17wru8x53xl" path="res://Environments/Assets/Assets_Res/Natural/Plants/Flower_Alium.res" id="35_xvalv"]
+[ext_resource type="Shader" uid="uid://ckfbva2548jxb" path="res://Environments/Materials/RandomColorShift.tres" id="36_h7ald"]
+[ext_resource type="PackedScene" uid="uid://bs1mvquncyjh3" path="res://Environments/Assets/Assets_Glb/Alium.glb" id="37_4mgsf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hps0x"]
 
@@ -92,6 +99,30 @@ shader_parameter/TimeScale = 0.585
 shader_parameter/Intensity = 0.94
 shader_parameter/Noise = ExtResource("5_imovl")
 shader_parameter/UVMask = ExtResource("6_jtpw0")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_da8ng"]
+render_priority = 0
+shader = ExtResource("36_h7ald")
+shader_parameter/ColorTintA = Color(0.167021, 0.466853, 0.791539, 1)
+shader_parameter/ColorTintB = Color(0.602871, 0.349988, 0.633187, 1)
+shader_parameter/ColorTintC = Color(0.708291, 0.338928, 0.226186, 1)
+shader_parameter/EmissionAmount = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_57lpt"]
+render_priority = 0
+shader = ExtResource("36_h7ald")
+shader_parameter/ColorTintA = Color(0.167021, 0.466853, 0.791539, 1)
+shader_parameter/ColorTintB = Color(0.602871, 0.349988, 0.633187, 1)
+shader_parameter/ColorTintC = Color(0.708291, 0.338928, 0.226186, 1)
+shader_parameter/EmissionAmount = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w24l4"]
+render_priority = 0
+shader = ExtResource("36_h7ald")
+shader_parameter/ColorTintA = Color(0.167021, 0.466853, 0.791539, 1)
+shader_parameter/ColorTintB = Color(0.602871, 0.349988, 0.633187, 1)
+shader_parameter/ColorTintC = Color(0.708291, 0.338928, 0.226186, 1)
+shader_parameter/EmissionAmount = null
 
 [node name="Test-environment" type="Node3D"]
 
@@ -268,3 +299,58 @@ mesh = ExtResource("29_ta0nn")
 [node name="TrafficCone2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6555, 0, 11.7271)
 mesh = ExtResource("28_tlu7g")
+
+[node name="Dumpster_WithText" parent="." instance=ExtResource("31_21k74")]
+transform = Transform3D(-0.372518, 0, 0.928025, 0, 1, 0, -0.928025, 0, -0.372518, -10.5793, 0, 10.289)
+
+[node name="TelephonePole2" parent="." instance=ExtResource("32_k7v5u")]
+transform = Transform3D(0.312932, 0, 0.949776, 0, 1, 0, -0.949776, 0, 0.312932, -6.53806, -0.357815, 12.8277)
+
+[node name="VendingMachine" parent="." instance=ExtResource("33_li0fb")]
+transform = Transform3D(-0.430243, 0, 0.902713, 0, 1, 0, -0.902713, 0, -0.430243, -9.56663, 0.125135, 14.0441)
+
+[node name="SwordFern2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63131, 1.19209e-07, 11.9796)
+mesh = ExtResource("11_6iera")
+
+[node name="FlowerAlium" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44758, 0.640506, 6.38913)
+mesh = ExtResource("35_xvalv")
+
+[node name="FlowerAlium2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.390072, 0, -0.920784, 0, 1, 0, 0.920784, 0, 0.390072, -0.0575359, 0, 10.4176)
+mesh = ExtResource("35_xvalv")
+
+[node name="FlowerAlium3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.44077, 0, -0.89762, 0, 1, 0, 0.89762, 0, 0.44077, 2.45664, 0, 11.1564)
+mesh = ExtResource("35_xvalv")
+
+[node name="TreeBirch2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.366, 0, 12.4417)
+mesh = ExtResource("7_xnfpj")
+
+[node name="Dreamverse" type="Node3D" parent="."]
+
+[node name="Node3D" parent="Dreamverse" instance=ExtResource("34_mh7dx")]
+transform = Transform3D(-0.408713, 0, 0.912663, 0, 1, 0, -0.912663, 0, -0.408713, 2.81216, 0.199286, 23.0134)
+
+[node name="FlowerAlium4" type="MeshInstance3D" parent="Dreamverse"]
+transform = Transform3D(0.948727, 0, -0.316096, 0, 1, 0, 0.316096, 0, 0.948727, 6.35922, -0.110678, 19.2004)
+mesh = ExtResource("35_xvalv")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_da8ng")
+
+[node name="StopSign2" type="MeshInstance3D" parent="Dreamverse"]
+transform = Transform3D(-0.0683988, 0, 0.997658, 0, 1, 0, -0.997658, 0, -0.0683988, 4.62443, -0.110678, 19.2033)
+mesh = ExtResource("25_ua4rd")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_57lpt")
+
+[node name="TreeBirch3" type="MeshInstance3D" parent="Dreamverse"]
+transform = Transform3D(-0.186747, 0, 0.982408, 0, 1, 0, -0.982408, 0, -0.186747, 7.67506, -0.781205, 18.1539)
+mesh = ExtResource("7_xnfpj")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_w24l4")
+
+[node name="Alium2" parent="." instance=ExtResource("37_4mgsf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6594, 0, -9.40684)

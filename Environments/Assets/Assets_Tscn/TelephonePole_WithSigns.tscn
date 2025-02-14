@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3nev5rm5488e"]
+
+[ext_resource type="ArrayMesh" uid="uid://q1025jwrvkuk" path="res://Environments/Assets/Assets_Res/City/TelephonePole.res" id="1_h7sso"]
+[ext_resource type="ArrayMesh" uid="uid://db3watgj73vme" path="res://Environments/Assets/Assets_Res/Geo_Decals/RectangleDecal.res" id="2_p2uhh"]
+[ext_resource type="Shader" uid="uid://cv022p6ku066g" path="res://Environments/Materials/RandomColor.tres" id="3_4lfay"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4xbgq"]
+render_priority = 0
+shader = ExtResource("3_4lfay")
+shader_parameter/ColorTintA = Color(0.96, 0.90112, 0.0768, 1)
+shader_parameter/ColorTintB = Color(0.876665, 0.282352, 0.598965, 1)
+shader_parameter/ColorTintC = Color(0.647605, 0.73465, 0.927871, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="TelephonePole" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0282162, 0, 0.0516491)
+mesh = ExtResource("1_h7sso")
+
+[node name="RectangleDecal" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.762842, -0.758054, 0.0241936, 0.153701, -0.10533, 0.829341, -0.761409, 0.738219, 0.143175, 0.357463, 4.20986, 0.447479)
+mesh = ExtResource("2_p2uhh")
+surface_material_override/0 = SubResource("ShaderMaterial_4xbgq")
+
+[node name="RectangleDecal2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.901735, -0.0983645, 0.101991, -0.0891309, 0.99515, 0.0100812, -0.165832, -1.11022e-16, -0.560007, 0.564461, 3.37997, 0.0466053)
+mesh = ExtResource("2_p2uhh")
+surface_material_override/0 = SubResource("ShaderMaterial_4xbgq")
+
+[node name="RectangleDecal3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0780761, 0, 0.996947, -0.107099, 2.77451, -0.00838746, -0.991178, -0.299791, -0.0776243, 0.0776882, 1.86088, 0.576656)
+mesh = ExtResource("2_p2uhh")
+surface_material_override/0 = SubResource("ShaderMaterial_4xbgq")
+
+[node name="RectangleDecal4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.338525, 1.00521, 0.0827835, 0.128724, -0.0682385, 0.834303, 1.02671, 0.339995, -0.0773058, 0.144729, 4.68561, -0.420781)
+mesh = ExtResource("2_p2uhh")
+surface_material_override/0 = SubResource("ShaderMaterial_4xbgq")
+
+[node name="RectangleDecal5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.264646, 0.00409064, -0.545303, -0.0881192, 0.995114, -0.013915, 0.877934, 0.0986477, 0.162981, -0.272286, 3.83813, -0.432773)
+mesh = ExtResource("2_p2uhh")
+surface_material_override/0 = SubResource("ShaderMaterial_4xbgq")
+
+[node name="RectangleDecal6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.842868, -0.379843, -0.520621, -0.14723, 2.75967, -0.0201793, 0.517587, 0.166442, -0.853549, 0.482133, 2.34646, -0.255835)
+mesh = ExtResource("2_p2uhh")
+surface_material_override/0 = SubResource("ShaderMaterial_4xbgq")
+
+[node name="RectangleDecal7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.971932, -0.457322, -0.113137, 0.128724, -0.0682385, 0.834303, -0.473363, -0.957553, -0.00542184, -0.387745, 4.78182, 0.323366)
+mesh = ExtResource("2_p2uhh")
+surface_material_override/0 = SubResource("ShaderMaterial_4xbgq")
+
+[node name="RectangleDecal8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.444674, 0.0678497, 0.497087, -0.0881192, 0.995114, -0.013915, -0.801917, -0.0717252, 0.27717, -0.105529, 3.93434, 0.630611)
+mesh = ExtResource("2_p2uhh")
+surface_material_override/0 = SubResource("ShaderMaterial_4xbgq")
+
+[node name="RectangleDecal9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.95875, 0.384181, -0.248689, -0.14723, 2.75967, -0.0201794, 0.24315, 0.156169, 0.968373, -0.50482, 2.44267, -0.0334836)
+mesh = ExtResource("2_p2uhh")
+surface_material_override/0 = SubResource("ShaderMaterial_4xbgq")

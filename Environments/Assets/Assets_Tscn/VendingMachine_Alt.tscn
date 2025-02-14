@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://cfd6nc00lbdy7"]
+
+[ext_resource type="ArrayMesh" uid="uid://ogcapq2j4m4x" path="res://Environments/Assets/Assets_Res/City/VendingMachine.res" id="1_or5pc"]
+[ext_resource type="Shader" uid="uid://ckfbva2548jxb" path="res://Environments/Materials/RandomColorShift.tres" id="2_v2r3h"]
+[ext_resource type="ArrayMesh" uid="uid://bcbaaj2pyevps" path="res://Environments/Assets/Assets_Res/Geo_Decals/DecalOvalCutout.res" id="2_vjt5g"]
+[ext_resource type="ArrayMesh" uid="uid://cq1bhv4fwi6xc" path="res://Environments/Assets/Assets_Res/Geo_Decals/CatDecal.res" id="5_r8van"]
+[ext_resource type="Material" uid="uid://kutt7nkmcyp7" path="res://Environments/Materials/Environment_Glow.tres" id="5_rvijn"]
+[ext_resource type="FontFile" uid="uid://dx7ttlditret0" path="res://utils/Fonts/Qaz-Regular.ttf" id="5_tr2vg"]
+[ext_resource type="FontFile" uid="uid://dnidyqmgraa21" path="res://utils/Fonts/Jupiteroid-Italic.ttf" id="6_q1bi2"]
+[ext_resource type="ArrayMesh" uid="uid://prshqwvgdna5" path="res://Environments/Assets/Assets_Res/Geo_Decals/DecalOval.res" id="8_i46oe"]
+[ext_resource type="Material" uid="uid://d0cqyjqs17nrl" path="res://Environments/Materials/Environment_SlightGlow.tres" id="8_jvy5b"]
+[ext_resource type="ArrayMesh" uid="uid://db3watgj73vme" path="res://Environments/Assets/Assets_Res/Geo_Decals/RectangleDecal.res" id="10_6hp2s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_15vuu"]
+render_priority = 0
+shader = ExtResource("2_v2r3h")
+shader_parameter/ColorTintA = Color(1, 1, 1, 1)
+shader_parameter/ColorTintB = Color(0.454735, 0.688362, 1, 1)
+shader_parameter/ColorTintC = Color(0.842138, 0.558071, 0.0756044, 1)
+shader_parameter/EmissionAmount = 0.1
+
+[node name="Node3D" type="Node3D"]
+
+[node name="VendingMachine" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_or5pc")
+surface_material_override/0 = SubResource("ShaderMaterial_15vuu")
+
+[node name="Decals" type="Node3D" parent="."]
+
+[node name="DecalOvalCutout" type="MeshInstance3D" parent="Decals"]
+transform = Transform3D(0.00305, -0.733878, 0.0470245, -0.273712, 0.0425133, 0.681228, -0.682546, -0.0203279, -0.272974, -1.36288, 4.64173, -0.779513)
+mesh = ExtResource("2_vjt5g")
+skeleton = NodePath("../..")
+metadata/_edit_group_ = true
+
+[node name="DecalGraphic" type="MeshInstance3D" parent="Decals"]
+transform = Transform3D(0.00661975, -1.12598, 0.0373393, 0.156451, 0.0378969, 1.11506, -1.11569, -0.00136662, 0.156585, -1.34055, 3.60914, -0.398197)
+mesh = ExtResource("5_r8van")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("5_rvijn")
+metadata/_edit_group_ = true
+
+[node name="DecalGraphic3" type="MeshInstance3D" parent="Decals"]
+transform = Transform3D(0.00299176, -0.50888, 0.0168753, -0.212719, 0.0140831, 0.462392, -0.462599, -0.00976695, -0.212514, -1.1638, 0.731842, 1.0922)
+mesh = ExtResource("5_r8van")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("5_rvijn")
+metadata/_edit_group_ = true
+
+[node name="Text" type="Node3D" parent="."]
+
+[node name="drink" type="Label3D" parent="Text"]
+transform = Transform3D(0.000665683, 0.0467443, -1.19645, 0.466242, 1.10201, 0.0433139, 1.10286, -0.46591, -0.0175891, -1.35508, 4.70139, -0.77432)
+modulate = Color(0.818803, 0.873296, 0.878859, 1)
+outline_modulate = Color(0.162, 0.3456, 0.81, 0.0627451)
+text = "drink"
+font = ExtResource("5_tr2vg")
+font_size = 48
+outline_size = 0
+
+[node name="moon" type="Label3D" parent="Text"]
+transform = Transform3D(0.000437669, 0.0307333, -0.786637, 0.241879, 0.748581, 0.029381, 0.749157, -0.241711, -0.00902664, -1.35632, 3.57072, -0.937218)
+modulate = Color(0, 0, 0, 1)
+text = "Moon-
+Drop"
+font = ExtResource("6_q1bi2")
+font_size = 149
+outline_size = 15
+horizontal_alignment = 0
+line_spacing = -43.28
+
+[node name="DecalOval" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0584382, -1.21044, 0, 1.21044, 0.0584382, 0, 0, 0, 1.70831, -1.30189, 3.65659, -0.323747)
+material_override = ExtResource("8_jvy5b")
+mesh = ExtResource("8_i46oe")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17667, 2.14952, -0.0678442)
+light_color = Color(0.620002, 0.556114, 0.939097, 1)
+light_energy = 2.268
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.775
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02255, 4.58172, 1.20331)
+light_color = Color(0.620002, 0.556114, 0.939097, 1)
+light_energy = 2.268
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.775
+
+[node name="RectangleDecal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.75149, 0, 0, 0, 1.75149, 0, 0, 0, 1.75149, -1.08962, 1.45598, -0.284236)
+mesh = ExtResource("10_6hp2s")
+surface_material_override/0 = ExtResource("5_rvijn")
