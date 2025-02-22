@@ -35,7 +35,9 @@ func _draw() -> void:
 
 func _process(_delta: float) -> void:
   if Input.is_action_just_pressed("ui_up"):
+    $MapGenerator.generate_map()
     redraw_map()
+    camera.position = Vector2((map_gen.map_width * TILE_WIDTH) / 2.0, (map_gen.map_width * TILE_WIDTH) / 2.0)
 
 func _physics_process(_delta: float) -> void:
   # Get mouse position in world coordinates
