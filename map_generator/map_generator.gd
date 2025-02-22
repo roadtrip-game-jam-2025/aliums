@@ -10,9 +10,11 @@ const TILE_SIZE = 5
 @export var map_width = 128
 @export var minimum_land_ratio = 0.5
 @export var max_attempts = 100
+@export var points_of_interest_count = 10
 
 var generated_map: Dictionary = {}
 var tiles: Dictionary = {}
+var points_of_interest: Array[Vector2i] = []
 
 func _ready() -> void:
   altitude_noise.seed = randi_range(0,2048)
@@ -36,7 +38,7 @@ func altitude_value(x: float, y: float) -> TileType:
 
     return TileType.SEA
 
-func generate_map() -> void:
+func generate_terrain() -> void:
   for _i in range(max_attempts):
     altitude_noise.seed = randi_range(0,2048)
     tiles = {}
@@ -48,7 +50,50 @@ func generate_map() -> void:
     if continent.keys().size() > minimum_land_ratio * map_width * map_width:
       generated_map = tiles
       return
-  assert(generated_map.keys().size() > 0, "Failed to generate map")
+  assert(generated_map.keys().size() > 0, "Failed to generate terrain")
+
+func _repel_points(points: Array[Vector2i], iterations: int = 10, repel_strength: float = 1.0) -> Array[Vector2i]:
+  var repelled_points = points.duplicate()
+
+  for _iter in range(iterations):
+    var forces = []
+    forces.resize(points_of_interest.size())
+
+    # Calculate repulsion forces
+    for i in range(repelled_points.size()):
+      forces[i] = Vector2.ZERO
+      for j in range(repelled_points.size()):
+        if i == j:
+          continue
+
+        var diff = Vector2(repelled_points[i] - repelled_points[j])
+        var dist = diff.length()
+        if dist < 0.0001:
+          diff = Vector2(randf_range(-1,1), randf_range(-1,1))
+          dist = diff.length()
+
+        forces[i] += diff.normalized() * repel_strength / (dist * dist)
+
+    # Apply forces
+    for i in range(repelled_points.size()):
+      var new_pos = repelled_points[i] + Vector2i(forces[i])
+      # Keep points on land
+      if generated_map.has(new_pos):
+        repelled_points[i] = new_pos
+
+  return repelled_points
+
+func generate_points_of_interest() -> void:
+  points_of_interest.clear()
+  for _i in range(points_of_interest_count):
+    var random_pos = generated_map.keys().pick_random()
+    points_of_interest.append(random_pos)
+
+  points_of_interest = _repel_points(points_of_interest)
+
+func generate_map() -> void:
+  generate_terrain()
+  generate_points_of_interest()
 
 func largest_connected_land_component() -> Dictionary:
     var visited = {}

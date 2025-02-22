@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://fccho158supg"]
+[gd_scene load_steps=8 format=3 uid="uid://fccho158supg"]
 
 [ext_resource type="PackedScene" uid="uid://c4qbdoqwv06a1" path="res://map_generator/MapGenerator.tscn" id="1_cajkf"]
 [ext_resource type="Script" path="res://map_generator/map_renderer.gd" id="1_jqfqo"]
@@ -26,21 +26,31 @@ texture = ExtResource("3_uxyc4")
 [sub_resource type="TileSet" id="TileSet_pjgdp"]
 sources/1 = SubResource("TileSetAtlasSource_gkxvx")
 
+[sub_resource type="LabelSettings" id="LabelSettings_atrjp"]
+font_size = 25
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
 [node name="MapRenderer" type="Node2D"]
+z_index = 1
+z_as_relative = false
 script = ExtResource("1_jqfqo")
 
 [node name="MapGenerator" parent="." instance=ExtResource("1_cajkf")]
 visible = true
-center_weight = 2.06
+sea_level = 0.005
+center_weight = 2.19
 minimum_land_ratio = 0.27
 max_attempts = 1000
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = -1
 tile_set = SubResource("TileSet_pjgdp")
 script = ExtResource("3_d815h")
 
 [node name="Tooltip" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 34.0
+label_settings = SubResource("LabelSettings_atrjp")
 
 [node name="Camera2D" type="Camera2D" parent="."]

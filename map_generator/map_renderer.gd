@@ -27,12 +27,17 @@ func _input(event: InputEvent) -> void:
   elif event is InputEventMouseMotion and dragging:
     camera.position -= event.relative
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _draw() -> void:
+  for pos in map_gen.points_of_interest:
+    var map_x = pos.x + map_gen.map_width / 2
+    var map_y = pos.y + map_gen.map_width / 2
+    draw_circle(Vector2(map_x * TILE_WIDTH, map_y * TILE_WIDTH), 10, Color.RED)
+
+func _process(_delta: float) -> void:
   if Input.is_action_just_pressed("ui_up"):
     redraw_map()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
   # Get mouse position in world coordinates
   var mouse_pos = get_local_mouse_position()
   var map_x = int(mouse_pos.x / TILE_WIDTH)
@@ -63,4 +68,3 @@ func redraw_map() -> void:
       if map_gen.altitude_value(x-0.5, y+0.5) == map_gen.TileType.LAND:
         n += 8
       tile_map.set_cell(Vector2i(ax, ay), 1, Vector2i(n, 0))
-  print(tile_map.get_used_cells_by_id(1))
