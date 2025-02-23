@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://eaqmfk4bkckk"
-path="res://.godot/imported/Hair_LongCurlyMullet_Pivot.glb-45fc2f0a3ef23a1c9338dbcbfc17ccd4.scn"
+path="res://.godot/imported/Hair_LongCurlyMullet_Pivot.glb-46a2ff851310de1694915ab2daa84d8f.scn"
 
 [deps]
 
-source_file="res://Characters/CharacterPieces/Hair_LongCurlyMullet_Pivot.glb"
-dest_files=["res://.godot/imported/Hair_LongCurlyMullet_Pivot.glb-45fc2f0a3ef23a1c9338dbcbfc17ccd4.scn"]
+source_file="res://Characters/CharacterPieces/Hair/GLBs/Hair_LongCurlyMullet_Pivot.glb"
+dest_files=["res://.godot/imported/Hair_LongCurlyMullet_Pivot.glb-46a2ff851310de1694915ab2daa84d8f.scn"]
 
 [params]
 
