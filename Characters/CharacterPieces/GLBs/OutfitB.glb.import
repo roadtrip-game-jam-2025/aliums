@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://3hn6ob1wtpan"
-path="res://.godot/imported/OutfitB.glb-79e1aa3b497935040059099dfe7b7b7d.scn"
+path="res://.godot/imported/OutfitB.glb-6050fa2455fdcb2fde87a4588cbfa2a4.scn"
 
 [deps]
 
-source_file="res://Characters/CharacterPieces/OutfitB.glb"
-dest_files=["res://.godot/imported/OutfitB.glb-79e1aa3b497935040059099dfe7b7b7d.scn"]
+source_file="res://Characters/CharacterPieces/GLBs/OutfitB.glb"
+dest_files=["res://.godot/imported/OutfitB.glb-6050fa2455fdcb2fde87a4588cbfa2a4.scn"]
 
 [params]
 
