@@ -1,0 +1,116 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://e8jfxgsc3pkx"
+path="res://.godot/imported/CharacterPieces_Batch3.glb-8ab9ab9f835b12b92ee751e7cd70b58a.scn"
+
+[deps]
+
+source_file="res://Characters/CharacterPieces/GLBs/CharacterPieces_Batch3.glb"
+dest_files=["res://.godot/imported/CharacterPieces_Batch3.glb-8ab9ab9f835b12b92ee751e7cd70b58a.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"meshes": {
+"CharacterPieces_Batch3_Cylinder_028": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Characters/CharacterPieces/Bottoms/OutfitI_Bottom.res"
+},
+"CharacterPieces_Batch3_Cylinder_059": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Characters/CharacterPieces/Bottoms/OutfitH_Bottom.res"
+},
+"CharacterPieces_Batch3_Cylinder_060": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Characters/CharacterPieces/Bottoms/OutfitG_Bottom.res"
+},
+"CharacterPieces_Batch3_Cylinder_062": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Characters/CharacterPieces/Bottoms/OutfitJ_Bottom.res"
+},
+"CharacterPieces_Batch3_Cylinder_114": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Characters/CharacterPieces/Tops/OutfitJ_Top.res"
+},
+"CharacterPieces_Batch3_Cylinder_138": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Characters/CharacterPieces/Tops/OutfitG_Top.res"
+},
+"CharacterPieces_Batch3_Cylinder_139": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Characters/CharacterPieces/Tops/OutfitH_Top.res"
+},
+"CharacterPieces_Batch3_Cylinder_178": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Characters/CharacterPieces/Tops/OutfitI_Top.res"
+}
+},
+"nodes": {
+"PATH:AnimationPlayer": {
+"import/skip_import": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
