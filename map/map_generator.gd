@@ -40,6 +40,12 @@ func altitude_value(x: float, y: float) -> TileType:
 
     return TileType.SEA
 
+func get_altitude(x: float, y: float) -> float:
+    var value = altitude_noise.get_noise_2d(x, y)
+    var center = Vector2(0,0)
+    var distance = sqrt((x-center.x)*(x-center.x) + (y-center.y)*(y-center.y))
+    return value * exp(-center_weight * distance / (map_width * 0.5))
+
 func generate_terrain() -> void:
   for _i in range(max_attempts):
     altitude_noise.seed = randi_range(0,2048)
