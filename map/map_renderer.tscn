@@ -1,9 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://fccho158supg"]
+[gd_scene load_steps=9 format=3 uid="uid://fccho158supg"]
 
-[ext_resource type="PackedScene" uid="uid://c4qbdoqwv06a1" path="res://map_generator/MapGenerator.tscn" id="1_cajkf"]
-[ext_resource type="Script" path="res://map_generator/map_renderer.gd" id="1_jqfqo"]
-[ext_resource type="Script" path="res://map_generator/tile_map_layer.gd" id="3_d815h"]
-[ext_resource type="Texture2D" uid="uid://igue1el5wnl1" path="res://map_generator/tiles/tileset.png" id="3_uxyc4"]
+[ext_resource type="PackedScene" uid="uid://c4qbdoqwv06a1" path="res://map/MapGenerator.tscn" id="1_cajkf"]
+[ext_resource type="Script" path="res://map/map_renderer.gd" id="1_jqfqo"]
+[ext_resource type="Script" path="res://map/tile_map_layer.gd" id="3_d815h"]
+[ext_resource type="Texture2D" uid="uid://igue1el5wnl1" path="res://map/tiles/tileset.png" id="3_uxyc4"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3sus0"]
+noise_type = 2
+frequency = 0.0464
+fractal_octaves = 3
+fractal_lacunarity = 5.87
+fractal_gain = 1.35
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gkxvx"]
 texture = ExtResource("3_uxyc4")
@@ -35,6 +42,7 @@ outline_color = Color(0, 0, 0, 1)
 z_index = 1
 z_as_relative = false
 script = ExtResource("1_jqfqo")
+noise = SubResource("FastNoiseLite_3sus0")
 
 [node name="MapGenerator" parent="." instance=ExtResource("1_cajkf")]
 visible = true
@@ -42,6 +50,8 @@ sea_level = 0.005
 center_weight = 2.19
 minimum_land_ratio = 0.27
 max_attempts = 1000
+repel_iterations = 80
+repel_strength = 5.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -1

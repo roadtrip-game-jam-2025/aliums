@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://dby7tt0m60q76"]
+
+[ext_resource type="Script" path="res://map/map_pin.gd" id="1_6au2y"]
+[ext_resource type="Texture2D" uid="uid://bokd6hkr47l2b" path="res://map/circle.png" id="2_6nqbb"]
+[ext_resource type="Texture2D" uid="uid://b3w5qe6ywmxil" path="res://map/dot.png" id="3_1oj5g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_874b8"]
+radius = 33.0606
+
+[node name="MapPin" type="Node2D"]
+script = ExtResource("1_6au2y")
+
+[node name="Marker" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0.903904, 0.458221, 0.727333, 1)
+scale = Vector2(0.0547485, 0.0547485)
+texture = ExtResource("2_6nqbb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_874b8")
+
+[node name="Square" type="Sprite2D" parent="."]
+modulate = Color(0.1344, 0.17472, 0.21, 1)
+position = Vector2(-9.53674e-07, 9.53674e-07)
+scale = Vector2(0.0650902, 0.0650902)
+texture = ExtResource("3_1oj5g")

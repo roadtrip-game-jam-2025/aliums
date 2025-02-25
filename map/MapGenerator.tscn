@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4qbdoqwv06a1"]
 
-[ext_resource type="Script" path="res://map_generator/map_generator.gd" id="1_j5aip"]
+[ext_resource type="Script" path="res://map/map_generator.gd" id="1_j5aip"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_fsiya"]
 noise_type = 3
