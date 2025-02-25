@@ -4,7 +4,7 @@
 [ext_resource type="Skin" uid="uid://bwbne2j8ikusu" path="res://Characters/CharacterPieces/CharacterBase_Skin.tres" id="2_08uud"]
 [ext_resource type="ArrayMesh" uid="uid://t0wb5n1einbe" path="res://Characters/CharacterPieces/Bottoms/OutfitG_Bottom.res" id="2_r254t"]
 [ext_resource type="ArrayMesh" uid="uid://dxe4a4rlck5al" path="res://Characters/CharacterPieces/Faces/CharacterBase_Face.res" id="3_vwtrl"]
-[ext_resource type="ArrayMesh" uid="uid://c5ky4aeag11d6" path="res://Characters/CharacterPieces/Tops/OutfitJ_Top.res" id="5_6pxqa"]
+[ext_resource type="ArrayMesh" uid="uid://dnjctl0r0qug8" path="res://Characters/CharacterPieces/Tops/OutfitI_Top.res" id="5_spa3w"]
 [ext_resource type="ArrayMesh" uid="uid://boqmkofuggcly" path="res://Characters/CharacterPieces/Shoes/WhiteSneakers_R.res" id="7_27ysi"]
 [ext_resource type="ArrayMesh" uid="uid://dibn21xhekxpd" path="res://Characters/CharacterPieces/Hair/Hair_LongCurlyMullet.res" id="8_4tfpd"]
 [ext_resource type="ArrayMesh" uid="uid://d0t366j4knsny" path="res://Characters/CharacterPieces/Shoes/WhiteSneakers_L.res" id="8_6pjst"]
@@ -1567,7 +1567,6 @@ bones/40/scale = Vector3(1, 1, 1)
 [node name="LowerBody" type="MeshInstance3D" parent="Anim_Base/Skeleton3D"]
 mesh = ExtResource("2_r254t")
 skin = ExtResource("2_08uud")
-blend_shapes/Basis.001 = 0.0
 blend_shapes/LargerCharacterSize = 0.0
 
 [node name="Head" type="MeshInstance3D" parent="Anim_Base/Skeleton3D"]
@@ -1575,13 +1574,13 @@ mesh = ExtResource("3_vwtrl")
 skin = ExtResource("2_08uud")
 
 [node name="UpperBody" type="MeshInstance3D" parent="Anim_Base/Skeleton3D"]
-mesh = ExtResource("5_6pxqa")
+mesh = ExtResource("5_spa3w")
 skin = ExtResource("2_08uud")
 blend_shapes/Basis.001 = 0.0
 blend_shapes/LargerCharacterSize = 0.0
 
 [node name="HairBone" type="BoneAttachment3D" parent="Anim_Base/Skeleton3D"]
-transform = Transform3D(0.983564, -0.0265778, -0.178595, 0.0691708, 0.969113, 0.23672, 0.166787, -0.245182, 0.955022, -0.0114702, 3.59731, 0.213222)
+transform = Transform3D(0.983564, -0.0265779, -0.178595, 0.0691709, 0.969113, 0.23672, 0.166787, -0.245183, 0.955022, -0.0114701, 3.59731, 0.213222)
 bone_name = "mixamorig_Head"
 bone_idx = 5
 
@@ -1591,7 +1590,7 @@ mesh = ExtResource("8_4tfpd")
 skeleton = NodePath("../..")
 
 [node name="RightFootBoneAttachment3D" type="BoneAttachment3D" parent="Anim_Base/Skeleton3D"]
-transform = Transform3D(-0.994359, 0.0467459, -0.0952086, -0.0281807, -0.981815, -0.187736, -0.102253, -0.183994, 0.977594, -0.137918, 1.16783, 0.605512)
+transform = Transform3D(-0.994359, 0.0467459, -0.0952084, -0.0281807, -0.981815, -0.187737, -0.102253, -0.183995, 0.977594, -0.137918, 1.16783, 0.605511)
 bone_name = "mixamorig_RightLeg"
 bone_idx = 37
 
@@ -1601,7 +1600,7 @@ mesh = ExtResource("7_27ysi")
 skeleton = NodePath("../../../..")
 
 [node name="LeftFootBoneAttachment3D" type="BoneAttachment3D" parent="Anim_Base/Skeleton3D"]
-transform = Transform3D(-0.995642, 0.0664939, 0.0653867, -0.0868228, -0.405015, -0.910177, -0.0340387, -0.911889, 0.409024, 0.204782, 0.970517, -0.131925)
+transform = Transform3D(-0.995642, 0.0664939, 0.0653868, -0.0868229, -0.405015, -0.910177, -0.0340386, -0.911889, 0.409024, 0.204782, 0.970513, -0.131926)
 bone_name = "mixamorig_LeftLeg"
 bone_idx = 32
 

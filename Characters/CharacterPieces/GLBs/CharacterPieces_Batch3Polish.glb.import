@@ -51,6 +51,11 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/path": "res://Characters/CharacterPieces/Tops/OutfitI_Top.res"
 }
+},
+"nodes": {
+"PATH:AnimationPlayer": {
+"import/skip_import": true
+}
 }
 }
 gltf/naming_version=1
