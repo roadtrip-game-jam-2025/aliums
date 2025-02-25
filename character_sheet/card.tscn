@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo8dbpkx3ydtt"]
+
+[ext_resource type="Texture2D" uid="uid://dtggvc4jyiq4y" path="res://character_sheet/rects.png" id="1_bjxut"]
+
+[node name="Card" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+modulate = Color(0.642955, 0.608019, 0.875723, 1)
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_bjxut")
+region_rect = Rect2(410.53, 148, 105, 106)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
