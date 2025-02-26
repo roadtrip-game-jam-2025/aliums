@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuymwlp084nyf"]
+
+[ext_resource type="PackedScene" uid="uid://dxw5nhq1w5ef2" path="res://Characters/Accessories/Shoulder/TuxedoCat.glb" id="1_3lhm5"]
+
+[node name="TuxedoCat" instance=ExtResource("1_3lhm5")]
+
+[node name="Skeleton3D" parent="CatRig" index="0"]
+bones/1/position = Vector3(4.55191e-15, 0.162927, -1.07083e-08)
+bones/1/rotation = Quaternion(0.477318, 0.292333, 0.172139, 0.810603)
+bones/2/rotation = Quaternion(-0.0518636, 6.56417e-07, -0.0430005, 0.997728)
+bones/3/rotation = Quaternion(-0.463394, -0.148298, -0.559417, 0.671064)
+bones/4/rotation = Quaternion(-0.637762, 0.108619, -0.354937, 0.674893)
+bones/5/rotation = Quaternion(-0.738774, 0.341913, -0.265605, 0.51649)
+bones/6/rotation = Quaternion(-0.181958, -0.158626, -0.766193, 0.595548)
+bones/7/rotation = Quaternion(-0.0134135, -0.246047, 0.533786, 0.808921)
+bones/8/rotation = Quaternion(0.513223, 0.241954, -0.0998399, 0.817369)
+bones/9/rotation = Quaternion(0.404064, -0.320434, -0.232507, 0.824618)
+bones/10/rotation = Quaternion(-0.0749487, 0.00647874, 0.432044, 0.898709)
+bones/11/rotation = Quaternion(0.0562182, -0.139057, 0.482165, 0.863145)
+bones/12/rotation = Quaternion(0.0736285, -0.00636467, -0.305101, 0.949448)
+bones/13/position = Vector3(2.16667e-09, -7.6778e-09, 3.94969e-09)
+bones/13/rotation = Quaternion(0.51258, 0.632034, 0.551383, -0.183768)
+bones/14/rotation = Quaternion(-0.549601, 0.0152756, 0.149676, 0.821768)
+bones/15/rotation = Quaternion(0.12712, -0.347755, -0.0389145, 0.928112)
+bones/16/position = Vector3(5.29394e-09, -1.10277e-08, 9.95908e-09)
+bones/16/rotation = Quaternion(0.693422, -0.382272, 0.294867, 0.534872)
+bones/17/rotation = Quaternion(0.51948, -0.0154838, -0.229965, 0.82281)
+bones/18/rotation = Quaternion(0.259218, -0.479635, -0.187438, 0.817082)
+bones/19/position = Vector3(-6.49138e-10, 1.42753e-09, 5.67442e-09)
+bones/19/rotation = Quaternion(0.99759, -0.0541907, 0.00235135, 0.043268)
+bones/20/rotation = Quaternion(-0.150106, -0.0100362, -0.0790785, 0.985451)
+bones/21/rotation = Quaternion(-0.0542285, -0.00695503, -0.124754, 0.99068)
+
+[node name="Eyelids" parent="CatRig/Skeleton3D" index="0"]
+visible = false
