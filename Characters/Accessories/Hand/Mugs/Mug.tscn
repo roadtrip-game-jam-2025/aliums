@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://cf0mjjwm1mlro"]
+
+[ext_resource type="ArrayMesh" uid="uid://cs8ed711npv3h" path="res://Characters/Accessories/Hand/Mugs/Mug_Grandpa.res" id="1_eylgf"]
+[ext_resource type="Material" uid="uid://bgthwhdvvamnc" path="res://Environments/Materials/Environment.tres" id="2_c6nuc"]
+[ext_resource type="ArrayMesh" uid="uid://dcnqj5ouayrwk" path="res://Characters/Accessories/Hand/Mugs/Coffee.res" id="2_du8pa"]
+[ext_resource type="Shader" uid="uid://d1nesumyer0wi" path="res://Characters/Accessories/Hand/Materials/SmokeMaterial.tres" id="5_1ixy1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hc63y"]
+size = Vector3(0.280029, 1.75244, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4l4ev"]
+size = Vector3(0.936249, 1.75244, 0.250488)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q25o3"]
+size = Vector3(0.936249, 1.7561, 0.229095)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xibrv"]
+size = Vector3(0.280029, 1.75244, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gcb4e"]
+size = Vector3(1.01257, 0.774658, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pu73p"]
+render_priority = 0
+shader = ExtResource("5_1ixy1")
+shader_parameter/ColorParameter = Color(0.82, 0.854729, 0.869534, 1)
+shader_parameter/OverallOpacity = 0.75
+
+[sub_resource type="QuadMesh" id="QuadMesh_w3mui"]
+
+[sub_resource type="Curve" id="Curve_hxmog"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_3iv10"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Mug" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = ExtResource("1_eylgf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Mug"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Mug/StaticBody3D"]
+transform = Transform3D(0.340811, 0, 0, 0, 0.340811, 0, 0, 0, 0.340811, -0.121604, 0.128823, -0.00120976)
+shape = SubResource("BoxShape3D_hc63y")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Mug/StaticBody3D"]
+transform = Transform3D(0.340811, 0, 0, 0, 0.340811, 0, 0, 0, 0.340811, 0.0220516, 0.128823, -0.128931)
+shape = SubResource("BoxShape3D_4l4ev")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Mug/StaticBody3D"]
+transform = Transform3D(0.340811, 0, 0, 0, 0.340811, 0, 0, 0, 0.340811, 0.0235025, 0.129447, 0.134858)
+shape = SubResource("BoxShape3D_q25o3")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Mug/StaticBody3D"]
+transform = Transform3D(0.340811, 0, 0, 0, 0.340811, 0, 0, 0, 0.340811, 0.141664, 0.128823, -0.00120976)
+shape = SubResource("BoxShape3D_xibrv")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Mug/StaticBody3D"]
+transform = Transform3D(0.340811, 0, 0, 0, 0.340811, 0, 0, 0, 0.340811, 0.00767239, 0.0323819, -0.0175671)
+shape = SubResource("BoxShape3D_gcb4e")
+
+[node name="SoftBody3D" type="SoftBody3D" parent="Mug"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+visible = false
+material_override = ExtResource("2_c6nuc")
+mesh = ExtResource("2_du8pa")
+skeleton = NodePath("")
+simulation_precision = 8
+total_mass = 1.01
+linear_stiffness = 0.55
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="Mug"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.001167, 0.68619, -0.00191382)
+visible = false
+material_override = SubResource("ShaderMaterial_pu73p")
+cast_shadow = 0
+amount = 3
+lifetime = 0.01
+speed_scale = 0.1
+mesh = SubResource("QuadMesh_w3mui")
+direction = Vector3(0, 2, 0)
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 0.01
+initial_velocity_max = 0.1
+angular_velocity_min = -90.0
+angular_velocity_max = 90.0
+angular_velocity_curve = SubResource("Curve_hxmog")
+color_ramp = SubResource("Gradient_3iv10")
+anim_speed_max = 49.66
+anim_offset_max = 0.0585
+
+[node name="Coffee" type="MeshInstance3D" parent="Mug"]
+transform = Transform3D(1, 0, 0, 0, 0.964568, 0, 0, 0, 1, -0.00101614, -0.00204849, 0.00179571)
+mesh = ExtResource("2_du8pa")
+skeleton = NodePath("../..")
