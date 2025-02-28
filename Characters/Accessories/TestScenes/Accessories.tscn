@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://dlgxyv4abnapp"]
+
+[ext_resource type="ArrayMesh" uid="uid://dcnqj5ouayrwk" path="res://Characters/Accessories/Hand/Mugs/Coffee.res" id="1_n5ko7"]
+[ext_resource type="ArrayMesh" uid="uid://c66up41ojwtkw" path="res://Characters/Accessories/Hand/Mugs/Mug_GAY.res" id="2_lptyh"]
+[ext_resource type="ArrayMesh" uid="uid://cs8ed711npv3h" path="res://Characters/Accessories/Hand/Mugs/Mug_Grandpa.res" id="3_2q1j4"]
+[ext_resource type="ArrayMesh" uid="uid://8yq7382prq8f" path="res://Characters/Accessories/Hand/Mugs/Mug_Ladybugs.res" id="4_h06p7"]
+[ext_resource type="ArrayMesh" uid="uid://dc8unxcebfeg2" path="res://Characters/Accessories/Hand/Mugs/Mug_Mondays.res" id="5_xjt3j"]
+[ext_resource type="ArrayMesh" uid="uid://bof0oawlm34yu" path="res://Characters/Accessories/Hand/Mugs/Mug_Moon-Drop.res" id="6_xcv4e"]
+[ext_resource type="ArrayMesh" uid="uid://d3bnqaxo4dbrf" path="res://Characters/Accessories/Hand/Mugs/Mug_SnailRacing.res" id="7_818l8"]
+[ext_resource type="ArrayMesh" uid="uid://ciye6vlbb63jo" path="res://Characters/Accessories/Hand/Mugs/Mug_YourText.res" id="8_xioi5"]
+
+[node name="Accessories" type="Node3D"]
+
+[node name="MugGay" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.386729, 0, 0)
+mesh = ExtResource("2_lptyh")
+
+[node name="MugGrandpa" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.905258, 0, 0.424863, 0, 1, 0, -0.424863, 0, 0.905258, -0.692334, 0, 0.25216)
+mesh = ExtResource("3_2q1j4")
+
+[node name="MugLadybugs" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.998409, 0, -0.0563791, 0, 1, 0, 0.0563791, 0, 0.998409, 0.0412348, 0, 0)
+mesh = ExtResource("4_h06p7")
+
+[node name="MugMondays" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.964705, 0, -0.263334, 0, 1, 0, 0.263334, 0, 0.964705, 0.416622, 0, 0.0928122)
+mesh = ExtResource("5_xjt3j")
+
+[node name="MugMoon-drop" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.833346, 0, -0.552752, 0, 1, 0, 0.552752, 0, 0.833346, 0.758877, -0.00107968, 0.277143)
+mesh = ExtResource("6_xcv4e")
+
+[node name="MugSnailRacing" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.594444, 0, 0.804137, 0, 1, 0, -0.804137, 0, 0.594444, -0.98234, 0.00671887, 0.541396)
+mesh = ExtResource("7_818l8")
+
+[node name="Coffee" type="MeshInstance3D" parent="MugSnailRacing"]
+mesh = ExtResource("1_n5ko7")
+skeleton = NodePath("../..")
+
+[node name="MugYourText" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.21494, 0, 0.976627, 0, 1, 0, -0.976627, 0, 0.21494, -1.17375, 0, 0.907349)
+mesh = ExtResource("8_xioi5")
