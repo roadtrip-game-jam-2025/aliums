@@ -1,0 +1,174 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dv2vkxc7r1w0m"
+path="res://.godot/imported/CityProps-BatchTwo.glb-a1f074ce4a455c750fc2eb86bdd45da8.scn"
+
+[deps]
+
+source_file="res://Environments/Assets/Assets_Glb/CityProps-BatchTwo.glb"
+dest_files=["res://.godot/imported/CityProps-BatchTwo.glb-a1f074ce4a455c750fc2eb86bdd45da8.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"meshes": {
+"CityProps-BatchTwo_Cube_049": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/AMCPacer.res"
+},
+"CityProps-BatchTwo_Cube_053": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/ParkingBumper.res"
+},
+"CityProps-BatchTwo_Cube_054": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/ChevroletTruck.res"
+},
+"CityProps-BatchTwo_Cube_068": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/CardboardBox.res"
+},
+"CityProps-BatchTwo_Mesh_095": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/MZTrophy.res"
+},
+"CityProps-BatchTwo_Plane_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/Natural/Other/BackgroundMountains.res"
+},
+"CityProps-BatchTwo_Plane_006": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/BuildingKit/Wall_Door.res"
+},
+"CityProps-BatchTwo_Plane_014": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/BuildingKit/Wall.res"
+},
+"CityProps-BatchTwo_Plane_018": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/BuildingKit/Wall_ShortWindows.res"
+},
+"CityProps-BatchTwo_Plane_021": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/BuildingKit/SmallWall_Door.res"
+},
+"CityProps-BatchTwo_Plane_022": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/BuildingKit/Wall_TallWindows.res"
+},
+"CityProps-BatchTwo_Plane_025": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/BuildingKit/WallTopper_Straight.res"
+},
+"CityProps-BatchTwo_Plane_032": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/BuildingKit/WallTopper_Corner.res"
+},
+"CityProps-BatchTwo_Plane_035": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/City/BuildingKit/Floor_Striped.res"
+},
+"CityProps-BatchTwo_Plane_394": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Environments/Assets/Assets_Res/Natural/Other/Quilt.res"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

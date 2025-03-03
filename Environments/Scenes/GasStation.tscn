@@ -1,0 +1,718 @@
+[gd_scene load_steps=29 format=3 uid="uid://blnv04bmoioat"]
+
+[ext_resource type="ArrayMesh" uid="uid://8aeywcmd0f5a" path="res://Environments/Assets/Assets_Res/City/BuildingKit/Wall_Door.res" id="3_dxx58"]
+[ext_resource type="PackedScene" uid="uid://wk134ykl3tsb" path="res://Characters/Character.tscn" id="3_h3eca"]
+[ext_resource type="ArrayMesh" uid="uid://d2vtv06xfcnin" path="res://Environments/Assets/Assets_Res/City/BuildingKit/Wall_ShortWindows.res" id="4_ux75h"]
+[ext_resource type="ArrayMesh" uid="uid://bhaokihakydey" path="res://Environments/Assets/Assets_Res/City/BuildingKit/Wall_TallWindows.res" id="5_3mrv2"]
+[ext_resource type="ArrayMesh" uid="uid://bpqlqnf7mfape" path="res://Environments/Assets/Assets_Res/City/BuildingKit/Wall.res" id="6_tdwjp"]
+[ext_resource type="ArrayMesh" uid="uid://bkcun82msjqbf" path="res://Environments/Assets/Assets_Res/City/BuildingKit/WallTopper_Straight.res" id="7_pjuf5"]
+[ext_resource type="Material" uid="uid://2crrji1vfmpg" path="res://Environments/Materials/DarkTransparency.tres" id="8_brgtm"]
+[ext_resource type="ArrayMesh" uid="uid://clifv3npss1oj" path="res://Environments/Assets/Assets_Res/City/BuildingKit/WallTopper_Corner.res" id="8_notir"]
+[ext_resource type="ArrayMesh" uid="uid://clgcpggtcqye1" path="res://Environments/Assets/Assets_Res/Natural/Plants/GrassChunk_Big.res" id="8_st5bu"]
+[ext_resource type="ArrayMesh" uid="uid://rjx3v1wdouay" path="res://Environments/Assets/Assets_Res/City/BuildingKit/Floor_Striped.res" id="9_eywfv"]
+[ext_resource type="Material" uid="uid://dhnoufgw6f102" path="res://Environments/Materials/Environment_Gray.tres" id="12_eq0y7"]
+[ext_resource type="ArrayMesh" uid="uid://ckkf8ekw5t3vi" path="res://Environments/Assets/Assets_Res/Natural/Other/BackgroundMountains.res" id="13_ufme3"]
+[ext_resource type="ArrayMesh" uid="uid://dbtput1vmfb1r" path="res://Environments/Assets/Assets_Res/City/CardboardBox.res" id="14_8joyw"]
+[ext_resource type="ArrayMesh" uid="uid://duqpv2bl8xiow" path="res://Environments/Assets/Assets_Res/City/ParkingBumper.res" id="17_du2jj"]
+[ext_resource type="ArrayMesh" uid="uid://up2n6ruxt8hr" path="res://Environments/Assets/Assets_Res/City/MZTrophy.res" id="19_n6qiq"]
+[ext_resource type="ArrayMesh" uid="uid://camyoed54bk8g" path="res://Environments/Assets/Assets_Res/City/ChevroletTruck.res" id="20_ebnkq"]
+[ext_resource type="ArrayMesh" uid="uid://cedkn756ma2v3" path="res://Environments/Assets/Assets_Res/City/AMCPacer.res" id="21_dyuyx"]
+[ext_resource type="ArrayMesh" uid="uid://dj5b1xg7rgurd" path="res://Environments/Assets/Assets_Res/City/DumpsterBase.res" id="22_mgyn7"]
+[ext_resource type="ArrayMesh" uid="uid://bxxps25mspeof" path="res://Environments/Assets/Assets_Res/City/DumpsterLids.res" id="23_ird4l"]
+[ext_resource type="ArrayMesh" uid="uid://q1025jwrvkuk" path="res://Environments/Assets/Assets_Res/City/TelephonePole.res" id="26_8obx3"]
+[ext_resource type="ArrayMesh" uid="uid://cuyxq3nkcand" path="res://Environments/Assets/Assets_Res/City/Tire.res" id="27_mmiur"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x1h0a"]
+sky_top_color = Color(0.126317, 0.448816, 0.794597, 1)
+sky_horizon_color = Color(0.0401178, 0.126136, 0.355491, 1)
+sky_curve = 0.454714
+ground_bottom_color = Color(0.225893, 0.191851, 0.152324, 1)
+ground_curve = 0.0156917
+sun_angle_max = 13.79
+sun_curve = 0.197926
+
+[sub_resource type="Sky" id="Sky_eppwk"]
+sky_material = SubResource("ProceduralSkyMaterial_x1h0a")
+
+[sub_resource type="Environment" id="Environment_hj8bn"]
+background_mode = 2
+background_color = Color(0, 0.00162157, 0.0491656, 1)
+background_energy_multiplier = 2.08
+sky = SubResource("Sky_eppwk")
+sky_rotation = Vector3(0, 0.654498, 0)
+ambient_light_source = 3
+ambient_light_color = Color(0.4, 0, 0.14, 1)
+ambient_light_sky_contribution = 0.55
+ambient_light_energy = 10.39
+reflected_light_source = 2
+ssao_enabled = true
+fog_light_color = Color(0.616379, 0.649052, 0.700388, 1)
+fog_height = 27.95
+fog_height_density = -0.032
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_albedo = Color(0.452467, 0.714066, 0.814319, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_anisotropy = 0.53
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vj3je"]
+exposure_multiplier = 1.445
+dof_blur_far_distance = 10.4
+
+[sub_resource type="FogMaterial" id="FogMaterial_eya5y"]
+resource_local_to_scene = true
+density = 7.0121
+emission = Color(0.984314, 0.309804, 0, 1)
+height_falloff = 1.45434
+edge_fade = 3.80546
+
+[sub_resource type="FogMaterial" id="FogMaterial_y62rh"]
+resource_local_to_scene = true
+density = 0.2
+albedo = Color(0.243936, 0.469393, 0.613092, 1)
+emission = Color(0.1156, 0.40013, 0.791816, 1)
+height_falloff = 1.45434
+edge_fade = 3.80546
+
+[sub_resource type="BoxMesh" id="BoxMesh_hps0x"]
+
+[node name="Test-environment" type="Node3D"]
+
+[node name="EnvironmentScene" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="EnvironmentScene"]
+environment = SubResource("Environment_hj8bn")
+camera_attributes = SubResource("CameraAttributesPractical_vj3je")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="EnvironmentScene"]
+transform = Transform3D(0.748906, 0.402993, 0.526058, -0.582628, 0.0221982, 0.812436, 0.315728, -0.914934, 0.251419, 1.13195, 2.51756, 5.08679)
+light_color = Color(1, 0.982667, 0.87, 1)
+light_energy = 1.095
+light_indirect_energy = 2.445
+light_volumetric_fog_energy = 16.0
+shadow_enabled = true
+shadow_bias = 0.13
+shadow_normal_bias = 3.693
+
+[node name="FogVolume" type="FogVolume" parent="EnvironmentScene"]
+transform = Transform3D(3.48644, 0, 0, 0, 5.35968, -1.63072, 0, 4.00241, 2.18372, 0, 0.289998, 1.49295)
+visible = false
+size = Vector3(20, 1, 10.91)
+material = SubResource("FogMaterial_eya5y")
+
+[node name="FogVolume2" type="FogVolume" parent="EnvironmentScene"]
+transform = Transform3D(7.78588, 0.706062, 9.31323e-10, -0.826416, 6.65167, 0.10091, 0.00574071, -0.0462056, 14.5267, -16.6586, 0.218255, 6.5642)
+size = Vector3(20, 1, 10.91)
+material = SubResource("FogMaterial_y62rh")
+
+[node name="Camera3D" type="Camera3D" parent="EnvironmentScene"]
+transform = Transform3D(0.371627, 0, 0.928382, 0, 1, 0, -0.928382, 0, 0.371627, 23.4737, 8.59483, 23.5691)
+
+[node name="Characters" type="Node3D" parent="."]
+transform = Transform3D(0.990948, 0, -0.134246, 0, 1, 0, 0.134246, 0, 0.990948, 2.2509, 0, 0.304934)
+
+[node name="Character" parent="Characters" instance=ExtResource("3_h3eca")]
+transform = Transform3D(0.184706, 0, 0.982794, 0, 1, 0, -0.982794, 0, 0.184706, 9.17587, -0.00268149, 26.137)
+
+[node name="Character2" parent="Characters" instance=ExtResource("3_h3eca")]
+transform = Transform3D(0.184706, 0, 0.982794, 0, 1, 0, -0.982794, 0, 0.184706, 10.3708, -0.00268149, 19.7792)
+
+[node name="Character3" parent="Characters" instance=ExtResource("3_h3eca")]
+transform = Transform3D(0.184706, 0, 0.982794, 0, 1, 0, -0.982794, 0, 0.184706, 11.4482, -0.00268149, 14.0465)
+
+[node name="Character4" parent="Characters" instance=ExtResource("3_h3eca")]
+transform = Transform3D(0.184706, 0, 0.982794, 0, 1, 0, -0.982794, 0, 0.184706, 12.545, -0.00268149, 8.21046)
+
+[node name="PumpShadeCover_Structure" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21.0001, 5.8411, 20.0552)
+
+[node name="PumpShadeCover" type="Node3D" parent="PumpShadeCover_Structure"]
+metadata/_edit_group_ = true
+
+[node name="WallTopper6" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper7" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 30)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="TopperCorner2" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 30)
+mesh = ExtResource("8_notir")
+skeleton = NodePath("../../..")
+
+[node name="TopperCorner" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.9938, 0.0269408, 26.9958)
+mesh = ExtResource("8_notir")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper10" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 30)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper12" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 30)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper11" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 30)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="PumpShadeCover_Sides" type="Node3D" parent="PumpShadeCover_Structure"]
+metadata/_edit_group_ = true
+
+[node name="w" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover_Sides"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, 27)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="w2" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover_Sides"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, 21)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="w3" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover_Sides"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, 15)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="w4" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover_Sides"]
+transform = Transform3D(8.9407e-08, 0, -1, 0, 1, 0, 1, 0, 8.9407e-08, -21, 0, 15)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="w5" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover_Sides"]
+transform = Transform3D(8.9407e-08, 0, -1, 0, 1, 0, 1, 0, 8.9407e-08, -21, 0, 21)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="w6" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover_Sides"]
+transform = Transform3D(8.9407e-08, 0, -1, 0, 1, 0, 1, 0, 8.9407e-08, -21, 0, 27)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="PumpShadeCoverFloors" type="Node3D" parent="PumpShadeCover_Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 22, 19)
+metadata/_edit_group_ = true
+
+[node name="FloorStriped" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 40.499, -14.1501, -1.28503)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped2" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 40.499, -14.1501, 5.13426)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped3" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 40.499, -14.1501, 11.5536)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped4" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 46.8033, -14.1501, -1.28503)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped5" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 46.8033, -14.1501, 5.13426)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped6" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 46.8033, -14.1501, 11.5536)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped7" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 53.1076, -14.1501, -1.28503)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped8" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 53.1076, -14.1501, 5.13426)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped9" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 53.1076, -14.1501, 11.5536)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped10" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 59.4119, -14.1501, -1.28503)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped11" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 59.4119, -14.1501, 5.13426)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped12" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 59.4119, -14.1501, 11.5536)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped13" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 65.7163, -14.1501, -1.28503)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped14" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 65.7163, -14.1501, 5.13426)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped15" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 65.7163, -14.1501, 11.5536)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="PumpShadeCover2" type="Node3D" parent="PumpShadeCover_Structure"]
+metadata/_edit_group_ = true
+
+[node name="WallTopper6" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover2"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0.075079, 14.2207, 12.0735)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper7" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover2"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 6.07508, 14.2207, 12.0735)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="TopperCorner2" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover2"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 6.07508, 14.2207, 12.0735)
+mesh = ExtResource("8_notir")
+skeleton = NodePath("../../..")
+
+[node name="TopperCorner" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover2"]
+transform = Transform3D(5.96046e-08, -8.74228e-08, -1, 0, -1, 8.74228e-08, -1, -7.10543e-15, -5.96046e-08, -20.9187, 14.2477, 15.0693)
+mesh = ExtResource("8_notir")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper10" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover2"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -5.92492, 14.2207, 12.0735)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper12" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover2"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -11.9249, 14.2207, 12.0735)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper11" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCover2"]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -17.9249, 14.2207, 12.0735)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="PumpShadeCoverFloors2" type="Node3D" parent="PumpShadeCover_Structure"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59, 22, 19)
+metadata/_edit_group_ = true
+
+[node name="FloorStriped" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 40.499, -15.8959, -1.28503)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped2" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 40.499, -15.8959, 5.13426)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped3" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 40.499, -15.8959, 11.5536)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped4" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 46.8033, -15.8959, -1.28503)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped5" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 46.8033, -15.8959, 5.13426)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped6" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 46.8033, -15.8959, 11.5536)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped7" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 53.1076, -15.8959, -1.28503)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped8" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 53.1076, -15.8959, 5.13426)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped9" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 53.1076, -15.8959, 11.5536)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped10" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 59.4119, -15.8959, -1.28503)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped11" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 59.4119, -15.8959, 5.13426)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped12" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 59.4119, -15.8959, 11.5536)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped13" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 65.7163, -15.8959, -1.28503)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped14" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 65.7163, -15.8959, 5.13426)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="FloorStriped15" type="MeshInstance3D" parent="PumpShadeCover_Structure/PumpShadeCoverFloors2"]
+transform = Transform3D(1.05072, 0, 0, 0, 1, 0, 0, 0, 1.06988, 65.7163, -15.8959, 11.5536)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../PumpShadeCover2")
+
+[node name="TelephonePole" type="MeshInstance3D" parent="PumpShadeCover_Structure"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 0.894666, 0, -1, 0, -4.37114e-08, -14.5047, -5.8411, 20.2922)
+mesh = ExtResource("26_8obx3")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("12_eq0y7")
+
+[node name="TelephonePole2" type="MeshInstance3D" parent="PumpShadeCover_Structure"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 0.894666, 0, -1, 0, -4.37114e-08, 0.495325, -5.8411, 20.2922)
+mesh = ExtResource("26_8obx3")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("12_eq0y7")
+
+[node name="Building" type="Node3D" parent="."]
+
+[node name="Front" type="Node3D" parent="Building"]
+
+[node name="WallTopper" type="MeshInstance3D" parent="Building/Front"]
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper2" type="MeshInstance3D" parent="Building/Front"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper4" type="MeshInstance3D" parent="Building/Front"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+mesh = ExtResource("8_notir")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper5" type="MeshInstance3D" parent="Building/Front"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.9938, 0.0269408, -3.00424)
+mesh = ExtResource("8_notir")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper3" type="MeshInstance3D" parent="Building/Front"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTallWindows4" type="MeshInstance3D" parent="Building/Front"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="SmallWallDoor" type="MeshInstance3D" parent="Building/Front"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000308514, -0.0181339, 0.00202751)
+mesh = ExtResource("3_dxx58")
+skeleton = NodePath("../../..")
+
+[node name="WallShortWindows" type="MeshInstance3D" parent="Building/Front"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+mesh = ExtResource("4_ux75h")
+skeleton = NodePath("../../..")
+surface_material_override/1 = ExtResource("8_brgtm")
+
+[node name="WallTallWindows" type="MeshInstance3D" parent="Building/Front"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+mesh = ExtResource("5_3mrv2")
+skeleton = NodePath("../../..")
+surface_material_override/1 = ExtResource("8_brgtm")
+
+[node name="WallTallWindows2" type="MeshInstance3D" parent="Building/Front"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 0)
+mesh = ExtResource("6_tdwjp")
+skeleton = NodePath("../../..")
+
+[node name="Roof" type="Node3D" parent="Building"]
+transform = Transform3D(1.08579, 0, 0, 0, 1, 0, 0, 0, 1, -12.52, 7.93694, 0.192472)
+
+[node name="FloorStriped" type="MeshInstance3D" parent="Building/Roof"]
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../Back")
+
+[node name="FloorStriped2" type="MeshInstance3D" parent="Building/Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../Back")
+
+[node name="FloorStriped3" type="MeshInstance3D" parent="Building/Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../Back")
+
+[node name="FloorStriped4" type="MeshInstance3D" parent="Building/Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../Back")
+
+[node name="FloorStriped5" type="MeshInstance3D" parent="Building/Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../Back")
+
+[node name="FloorStriped6" type="MeshInstance3D" parent="Building/Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -6)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../Back")
+
+[node name="FloorStriped7" type="MeshInstance3D" parent="Building/Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../Back")
+
+[node name="FloorStriped8" type="MeshInstance3D" parent="Building/Roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -6)
+mesh = ExtResource("9_eywfv")
+skeleton = NodePath("../../Back")
+
+[node name="Back" type="Node3D" parent="Building"]
+
+[node name="WallTopper6" type="MeshInstance3D" parent="Building/Back"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -5.59875, 0, -11.6008)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper7" type="MeshInstance3D" parent="Building/Back"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -11.5988, 0, -11.6009)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper8" type="MeshInstance3D" parent="Building/Back"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -11.5988, 0, -11.6009)
+mesh = ExtResource("8_notir")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper9" type="MeshInstance3D" parent="Building/Back"]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 9.395, 0.0269408, -8.59661)
+mesh = ExtResource("8_notir")
+skeleton = NodePath("../../..")
+
+[node name="WallTopper10" type="MeshInstance3D" parent="Building/Back"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.401249, 0, -11.6008)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="WallTallWindows5" type="MeshInstance3D" parent="Building/Back"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.40125, 0, -11.6008)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../../..")
+
+[node name="SmallWallDoor2" type="MeshInstance3D" parent="Building/Back"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -5.59875, 0, -11.6008)
+mesh = ExtResource("3_dxx58")
+skeleton = NodePath("../../..")
+
+[node name="WallShortWindows2" type="MeshInstance3D" parent="Building/Back"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -11.5988, 0, -11.6009)
+mesh = ExtResource("4_ux75h")
+skeleton = NodePath("../../..")
+
+[node name="WallTallWindows3" type="MeshInstance3D" parent="Building/Back"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.401249, 0, -11.6008)
+mesh = ExtResource("5_3mrv2")
+skeleton = NodePath("../../..")
+
+[node name="WallTallWindows6" type="MeshInstance3D" parent="Building/Back"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.40125, 0, -11.6008)
+mesh = ExtResource("6_tdwjp")
+skeleton = NodePath("../../..")
+
+[node name="WallTallWindows3" type="MeshInstance3D" parent="Building"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, -3)
+mesh = ExtResource("6_tdwjp")
+skeleton = NodePath("../..")
+
+[node name="WallTallWindows5" type="MeshInstance3D" parent="Building"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, -9)
+mesh = ExtResource("6_tdwjp")
+skeleton = NodePath("../..")
+
+[node name="WallTallWindows6" type="MeshInstance3D" parent="Building"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 0, -3)
+mesh = ExtResource("6_tdwjp")
+skeleton = NodePath("../..")
+
+[node name="WallTallWindows7" type="MeshInstance3D" parent="Building"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9, 0, -9)
+mesh = ExtResource("6_tdwjp")
+skeleton = NodePath("../..")
+
+[node name="WallTopper6" type="MeshInstance3D" parent="Building"]
+transform = Transform3D(0.000366525, 0, 1, 0, 1, 0, -1, 0, 0.000366525, 9, 0, -3)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../..")
+
+[node name="WallTopper7" type="MeshInstance3D" parent="Building"]
+transform = Transform3D(0.000366525, 0, 1, 0, 1, 0, -1, 0, 0.000366525, 9, 0, -9)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../..")
+
+[node name="WallTopper8" type="MeshInstance3D" parent="Building"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, -3)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../..")
+
+[node name="WallTopper9" type="MeshInstance3D" parent="Building"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, -9)
+mesh = ExtResource("7_pjuf5")
+skeleton = NodePath("../..")
+
+[node name="bg" type="Node3D" parent="."]
+
+[node name="BackgroundMountains" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(-1.0698, 0, -8.82353, 0, 14.7937, 0, 8.22353, 0, -1.14786, -143.542, -3.265, -45.5455)
+mesh = ExtResource("13_ufme3")
+skeleton = NodePath("")
+
+[node name="Base" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(98.0187, 0, 0, 0, 0.915861, 0, 0, 0, 110.239, 13.7923, -0.348873, -0.31349)
+mesh = SubResource("BoxMesh_hps0x")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("12_eq0y7")
+
+[node name="GrassChunkBig" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(5.37157, 0, 0, 0, 2.37443, 0, 0, 0, 5.37157, -43.9933, -3.3499, 40.5052)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig10" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(5.84378, 0.477299, 0, -1.16929, 2.3854, 0, 0, 0, 5.37156, -66.3198, -3.3499, 40.5052)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig11" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(5.84378, 0.477299, 0, -1.16929, 2.3854, 0, 0, 0, 5.37156, -66.3198, -3.3499, 69.983)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig12" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(2.91818, 0.238346, -4.65388, -1.16929, 2.3854, -4.77091e-15, 5.063, 0.413528, 2.68237, -42.4884, -3.3499, 69.983)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig2" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(2.93217, 0, -4.50068, 0, 2.37443, 0, 4.50068, 0, 2.93217, -66.8939, -3.3499, 26.0153)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig3" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(2.93217, 0, -4.50068, 0, 2.37443, 0, 4.50068, 0, 2.93217, -38.62, -3.3499, -0.73732)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig4" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(5.37157, 0, 0, 0, 2.37443, 0, 0, 0, 5.37157, -19.4464, -3.62007, -31.8396)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig5" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(2.93217, 0, -4.50068, 0, 2.37443, 0, 4.50068, 0, 2.93217, -42.265, -3.3597, -31.6433)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig6" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(2.93217, 0, -4.50068, 0, 2.37443, 0, 4.50068, 0, 2.93217, -13.9912, -2.62737, -58.3959)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig7" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(5.37157, 0, 0, 0, 2.37443, 0, 0, 0, 5.37157, 26.3622, -2.3428, -65.0862)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig8" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(2.93217, 0, -4.50068, 0, 2.37443, 0, 4.50068, 0, 2.93217, 3.46164, -3.3706, -65.0862)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="GrassChunkBig9" type="MeshInstance3D" parent="bg"]
+transform = Transform3D(2.93217, 0, -4.50068, 0, 2.37443, 0, 4.50068, 0, 2.93217, 31.7355, -3.3706, -91.8388)
+mesh = ExtResource("8_st5bu")
+skeleton = NodePath("../..")
+
+[node name="Set dressing" type="Node3D" parent="."]
+
+[node name="MzTrophy" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(0.889441, -0.386445, -0.244038, 0.398493, 0.917171, 0, 0.223825, -0.0972475, 0.969766, 13.4439, 0.307905, 0.354561)
+mesh = ExtResource("19_n6qiq")
+skeleton = NodePath("../..")
+
+[node name="ChevroletTruck" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(-0.119426, 0, -0.892681, 0, 0.900634, 0, 0.892681, 0, -0.119426, -0.667503, 0, 12.117)
+mesh = ExtResource("20_ebnkq")
+skeleton = NodePath("../..")
+
+[node name="AmcPacer" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(0.310527, 0, 0.950565, 0, 1, 0, -0.950565, 0, 0.310527, 1.39139, 0, 23.6855)
+mesh = ExtResource("21_dyuyx")
+skeleton = NodePath("../..")
+
+[node name="CardboardBox" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(-1.51618, 0, 2.89317, 0, 3.26638, 0, -2.89317, 0, -1.51618, 3.39659, 0.246016, 1.22309)
+mesh = ExtResource("14_8joyw")
+skeleton = NodePath("../..")
+
+[node name="DumpsterBase" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(-0.917004, 0, 0.398877, 0, 1, 0, -0.398877, 0, -0.917004, 11.6543, 0.156518, -3.31023)
+mesh = ExtResource("22_mgyn7")
+
+[node name="DumpsterLids" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(-0.917004, 0, 0.398877, 0, 1, 0, -0.398877, 0, -0.917004, 11.6543, -0.0382061, -3.31023)
+mesh = ExtResource("23_ird4l")
+
+[node name="ParkingBumper" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(0.0937087, 0, 0.9956, 0, 1, 0, -0.9956, 0, 0.0937087, 15.6373, 0.0702715, -1.94149)
+mesh = ExtResource("17_du2jj")
+
+[node name="ParkingBumper2" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(0.0937087, 0, 0.9956, 0, 1, 0, -0.9956, 0, 0.0937087, 16.5271, 0.0702715, -11.3944)
+mesh = ExtResource("17_du2jj")
+
+[node name="Tire" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8627, 0, 1.21056)
+mesh = ExtResource("27_mmiur")
+
+[node name="Tire2" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(-0.337654, 0, 0.94127, 0, 1, 0, -0.94127, 0, -0.337654, 10.822, 0.588085, 0.977883)
+mesh = ExtResource("27_mmiur")
+
+[node name="Tire3" type="MeshInstance3D" parent="Set dressing"]
+transform = Transform3D(0.915248, 0, -0.40289, 0, 1, 0, 0.40289, 0, 0.915248, 10.4465, 1.21648, 1.03853)
+mesh = ExtResource("27_mmiur")

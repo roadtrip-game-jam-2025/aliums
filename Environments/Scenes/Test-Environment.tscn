@@ -184,6 +184,7 @@ material = SubResource("FogMaterial_y62rh")
 
 [node name="DemoCamera" parent="EnvironmentScene" instance=ExtResource("2_v2tfx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.97542, 5.01396, 19.5403)
+current = true
 
 [node name="Characters" type="Node3D" parent="."]
 
